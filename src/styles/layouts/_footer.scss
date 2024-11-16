@@ -1,0 +1,23 @@
+@import "../details/mixin";
+
+.footer {
+    @include flexEndC;
+    flex-direction: column;
+    width: 100%;
+    height: 10em;
+    background: #000000;
+    gap: 1em;
+
+    .footerLogo {
+        width: 100px;
+    }
+
+    .footerCopyRights {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 1em;
+        text-align: center;
+        color: #FFFFFF;
+        padding-bottom: 1em;
+    }
+}

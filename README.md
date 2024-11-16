@@ -1,3 +1,7 @@
+# Portfolio
+Ce projet regroupe tous les projets réalisés tout au long du parcours de la formation Intégrateur Web chez OpenClassrooms.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

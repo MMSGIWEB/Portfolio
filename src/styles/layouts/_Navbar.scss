@@ -1,0 +1,48 @@
+@import '../details/mixin';
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 0 0 0;
+
+    .logo {
+        width: 10%;
+        padding-left: 5em;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 3.5em;
+        padding-right: 5em;
+
+        .link {
+            @include flexcc;
+
+            &:active {
+                @include blackUnderline;
+            }
+
+            &:hover {
+                @include blackUnderline;
+            }
+
+            div {
+                color: #000000;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                text-wrap: nowrap;
+                padding: 1em 0 0 0;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+
+    nav a.active {
+        @include blackUnderline;
+    }
+
+}

@@ -1,0 +1,54 @@
+@import '../details/mixin';
+
+.cardsContainer {
+    @include flexSaC;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 0.5em;
+    row-gap: 3em;
+    box-sizing: border-box;
+    width: 100%;
+    background: #F6F6F6;
+    border-radius: 25px;
+    padding: 3em 1em;
+
+
+
+    article {
+        width: 27%;
+        max-width: 700px;
+        height: 350px;
+
+        .cardLink {
+            display: flex;
+            width: 100%;
+            border-radius: 10px;
+
+            .card {
+                overflow: hidden;
+                width: 100%;
+
+                .cardImg {
+                    height: 350px;
+                    border-radius: 10px;
+                    // box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.15);
+                }
+
+                .cardTitle {
+                    position: relative;
+                    width: 80%;
+                    height: 54px;
+                    bottom: 4em;
+                    left: 1.3em;
+                    font-family: Montserrat;
+                    font-weight: 700;
+                    text-align: left;
+                    color: #FFFFFF;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: normal;
+                }
+            }
+        }
+    }
+}
