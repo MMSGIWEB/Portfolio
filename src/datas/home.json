@@ -1,3 +1,31 @@
 [
-    {}
+    {
+        "title": "Welcome to my Portfolio !",
+        "intro": "This is my portfolio and it contains all my projects from my training to now. This site will be updated as new projects are completed. So to be updated just subscribe on this link bellow.",
+        "skills": [
+            "./src/assets/images/svg-tools/canva.svg",
+            "./src/assets/images/svg-tools/css.svg",
+            "./src/assets/images/svg-tools/figma.svg",
+            "./src/assets/images/svg-tools/git.svg",
+            "./src/assets/images/svg-tools/gitHub.svg",
+            "./src/assets/images/svg-tools/html.svg",
+            "./src/assets/images/svg-tools/javascript.svg",
+            "./src/assets/images/svg-tools/nodejs.svg",
+            "./src/assets/images/svg-tools/notion.svg",
+            "./src/assets/images/svg-tools/powerpoint.svg",
+            "./src/assets/images/svg-tools/react.svg",
+            "./src/assets/images/svg-tools/redux.svg",
+            "./src/assets/images/svg-tools/sass.svg",
+            "./src/assets/images/svg-tools/trello.svg",
+            "./src/assets/images/svg-tools/vscode.svg"
+        ],
+        "twitter": "insta",
+        "linkedIn": "insta",
+        "insta": "insta",
+        "gitHub": "insta",
+        "name": "Semedo Goçalves Maria Madalena",
+        "email": "mariaintweb@gmail.com",
+        "contact": "01 12 23 34 45",
+        "location": "93160, Noisy-le-Grand, France"
+    }
 ]

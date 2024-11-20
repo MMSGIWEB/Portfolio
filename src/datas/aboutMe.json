@@ -1,0 +1,21 @@
+[
+    {
+        "content": "Je m'appelle Maria...",
+        "course1":[
+            {
+                "title": "FORMATION INTÉGRATRICE WEB",
+                "date": "2024",
+                "trainingCenter": "OPENCLASSROOMS"
+            },
+            {
+                "title": "BAC LITÉRAIRE",
+                "date": "2017",
+                "trainingCenter": "LYCÉE RENÉ CASSIN - GONESSE"  
+            }
+        ],
+        "certifications": [
+            
+        ]
+
+    }
+]
