@@ -1,12 +1,12 @@
-import logo from "../../assets/images/logo/logo.png"
 import { NavLink } from "react-router-dom";
+import logo from '../../assets/images/logo/logo.png'
 
 function Navbar() {
 
     return (
         <header className="navbar">
             <div className="logo">
-                <img src={logo} alt="logo kasa" />
+                <img src={logo} alt="logo" />
             </div>
             <nav className="navigation" >
                 <NavLink to="/" className="link indexLink">

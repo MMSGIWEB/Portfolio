@@ -1,6 +1,5 @@
 import Navbar from "../components/navbar/Navbar";
 import Appts from "../components/home/Appts";
-import footerLogo from "../assets/images/logo/logo-white.png"
 import Footer from "../components/footer/Footer";
 
 function Home() {
@@ -10,7 +9,7 @@ function Home() {
             <main className="index">
                 <Appts />
             </main>
-            <Footer img={footerLogo} copyRights="© 2020 Kasa. All rights reserved" />
+            <Footer img={"footerLogo"} copyRights="© 2020 Kasa. All rights reserved" />
         </>
     )
 }

@@ -49,8 +49,8 @@ function ApptInfo() {
                 </div>
                 {/* ici appts.map */}
                 <div className="details">
-                    <Collapse title={'Description'} content={logement?.description} />
-                    <Collapse title={'Équipements'} content={<ul>{equipments}</ul>} />
+                    <Collapse title={'Contexte'} content={logement?.description} />
+                    <Collapse title={'Spécifications techniques'} content={<ul>{equipments}</ul>} />
                 </div>
             </section>
         </>

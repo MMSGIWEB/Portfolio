@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './App';
 import Fiche from './pages/Fiche';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import About from './pages/about';
 
 
 const router = createBrowserRouter([
@@ -16,11 +17,16 @@ const router = createBrowserRouter([
       <>
         <Fiche />
       </>
+  },
+  {
+    path: "/about",
+    element:
+      <>
+        <About />
+      </>
   }
 ])
 
-//on définit root comme racine avec cette méthode
-// const root = ReactDOM.createRoot(document.getElementById('root'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

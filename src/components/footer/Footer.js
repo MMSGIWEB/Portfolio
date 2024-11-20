@@ -1,8 +1,10 @@
-function Footer({ img, copyRights }) {
+import logo from '../../assets/images/logo/logo.png'
+
+function Footer() {
   return (
     <div className="footer">
-      <img src={img} alt="logo kasa" className="footerLogo" />
-      <h3 className="footerCopyRights">{copyRights}</h3>
+      <img src={logo} alt="logo kasa" className="footerLogo" />
+      <h3 className="footerCopyRights">© 2024 MariaIntWeb. Tous droits réservés</h3>
     </div>
   );
 }
