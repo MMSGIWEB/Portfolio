@@ -5,27 +5,28 @@ import Fiche from './pages/Fiche';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/about';
 
-
-const router = createBrowserRouter([
+// Configuration du routeur avec le flag "v7_fetcherPersist"
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+      path: "/fiche/:id", // Route avec paramètre d'URL
+      element: <Fiche />,
+    },
+    {
+      path: "/about",
+      element: <About />,
+    },
+  ],
   {
-    path: "/",
-    element: <App />
-  },
-  {//chemin avec paramètre URL avec id unique
-    path: "/fiche/:id",
-    element:
-      <>
-        <Fiche />
-      </>
-  },
-  {
-    path: "/about",
-    element:
-      <>
-        <About />
-      </>
+    future: {
+      v7_fetcherPersist: true, // Active la persistance des fetchers
+    },
   }
-])
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
