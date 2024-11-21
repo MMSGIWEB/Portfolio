@@ -9,7 +9,7 @@ import About from './pages/about';
 const router = createBrowserRouter(
   [
     {
-      path: "/",
+      path: "/Portfolio",
       element: <App />,
     },
     {
