@@ -2,132 +2,132 @@
     {
         "id": "11202403",
         "title": "Booki",
-        "cover": "./src/assets/images/projects/booki1.png",
+        "cover": "/assets/images/projects/booki1.png",
         "github": "https://github.com/MMSGIWEB/Booki",
         "link": "https://mmsgiweb.github.io/Booki/",
         "tools": [
-            "./src/assets/images/svg-tools/html.svg",
-            "./src/assets/images/svg-tools/css.svg"
+            "/assets/images/svg-tools/html.svg",
+            "/assets/images/svg-tools/css.svg"
         ],
         "content": "Intégration de la page d'accueil d'une agence de voyage avec HTML & CSS sur appui de la maquette figma. En plus du responsive sur tablette et mobile",
          "pictures": [
-            "./src/assets/images/projects/booki.png",
-            "./src/assets/images/projects/booki2.png"
+            "/assets/images/projects/booki.png",
+            "/assets/images/projects/booki2.png"
         ]
     },
     {
         "id": "11202404",
         "title": "ohmyfood",
-        "cover": "./src/assets/images/projects/ohmyfood0.png",
+        "cover": "/assets/images/projects/ohmyfood0.png",
         "github": "https://github.com/MMSGIWEB/Ohmyfood",
         "link": "https://mmsgiweb.github.io/Ohmyfood/",
         "tools": [
-            "./src/assets/images/svg-tools/html.svg",
-            "./src/assets/images/svg-tools/sass.svg",
-            "./src/assets/images/svg-tools/css.svg"
+            "/assets/images/svg-tools/html.svg",
+            "/assets/images/svg-tools/sass.svg",
+            "/assets/images/svg-tools/css.svg"
         ],
         "content": "Le projet OhMyFood a pour objectif de développer une application web permettant aux utilisateurs de consulter les menus de différents restaurants gastronomiques. L'objectif principal est de permettre aux utilisateurs de composer leur propre menu et de passer leur commande en ligne, afin d'améliorer l'expérience culinaire et la commodité pour les clients.",
         "pictures": [
-            "./src/assets/images/projects/ohmyfood",
-            "./src/assets/images/projects/ohmyfood2",
-            "./src/assets/images/projects/ohmyfood3",
-            "./src/assets/images/projects/ohmyfood4"
+            "/assets/images/projects/ohmyfood",
+            "/assets/images/projects/ohmyfood2",
+            "/assets/images/projects/ohmyfood3",
+            "/assets/images/projects/ohmyfood4"
         ]
     },
     {
         "id": "11202405",
         "title": "Print it",
-        "cover": "./src/assets/images/projects/print-it.png",
+        "cover": "/assets/images/projects/print-it.png",
         "github": "https://github.com/MMSGIWEB/Print-it-JS",
         "link": "https://mmsgiweb.github.io/Print-it-JS/",
         "tools": [
-            "./src/assets/images/svg-tools/html.svg",
-            "./src/assets/images/svg-tools/css.svg",
-            "./src/assets/images/svg-tools/javascript.svg"
+            "/assets/images/svg-tools/html.svg",
+            "/assets/images/svg-tools/css.svg",
+            "/assets/images/svg-tools/javascript.svg"
         ],
         "content": "Le projet Print It vise à développer une application web permettant aux utilisateurs d'envoyer des fichiers à imprimer et de les récupérer ultérieurement dans un point de collecte spécifié. Ici, j'ai intégré un carrousel à l'emplacement de la bannière."
     },
     {
         "id": "11202406",
         "title": "Sophie Bluel",
-        "cover": "./src/assets/images/projects/sophie1.png",
+        "cover": "/assets/images/projects/sophie1.png",
         "github": "https://github.com/MMSGIWEB/Portfolio-architecte-sophie-bluel",
         "tools": [
-            "./src/assets/images/svg-tools/html.svg",
-            "./src/assets/images/svg-tools/css.svg",
-            "./src/assets/images/svg-tools/javascript.svg"
+            "/assets/images/svg-tools/html.svg",
+            "/assets/images/svg-tools/css.svg",
+            "/assets/images/svg-tools/javascript.svg"
         ],
         "content": "Le projet de portfolio de Sophie Bluel a pour objectif principal de lui permettre de se connecter en tant qu'administratrice après avoir récupéré dynamiquement ses travaux depuis le back-end. Par la suite, elle sera capable de modifier sa galerie en ajoutant ou supprimant un travail via une modale.",
          "pictures": [
-            "./src/assets/images/projects/sophie",
-            "./src/assets/images/projects/sophie2",
-            "./src/assets/images/projects/sophie3"
+            "/assets/images/projects/sophie",
+            "/assets/images/projects/sophie2",
+            "/assets/images/projects/sophie3"
         ]
     },
     {
         "id": "11202407",
         "title": "Kasa",
-        "cover": "./src/assets/images/projects/kasa",
+        "cover": "/assets/images/projects/kasa",
         "github": "https://github.com/MMSGIWEB/Kasa",
         "tools": [
-            "./src/assets/images/svg-tools/html.svg",
-            "./src/assets/images/svg-tools/css.svg",
-            "./src/assets/images/svg-tools/sass.svg",
-            "./src/assets/images/svg-tools/react.svg",
-            "./src/assets/images/svg-tools/javascript.svg"
+            "/assets/images/svg-tools/html.svg",
+            "/assets/images/svg-tools/css.svg",
+            "/assets/images/svg-tools/sass.svg",
+            "/assets/images/svg-tools/react.svg",
+            "/assets/images/svg-tools/javascript.svg"
         ],
         "content": "Le projet Kasa consiste à développer une application web de location immobilière en utilisant React et React Router. L\"objectif est de créer une interface front-end fluide et moderne, en respectant les designs fournis, et en utilisant des données simulées. En plus du responsive en version desktop et mobile.",
          "pictures": [
-            "./src/assets/images/projects/kasa1",
-            "./src/assets/images/projects/kasa2"
+            "/assets/images/projects/kasa1",
+            "/assets/images/projects/kasa2"
         ]
     },
     {
         "id": "11202408",
         "title": "Nina Carducci",
-        "cover": "./src/assets/images/projects/nina2",
+        "cover": "/assets/images/projects/nina2",
         "github": "https://github.com/MMSGIWEB/nina-carducci",
         "link": "https://mmsgiweb.github.io/nina-carducci/",
         "content": "Ici, il s'agit de l'optimisation du site de Nina Carducci. Avec l'aide de l'outil Lighthouse et WAVE, j'ai pu optimiser les performances du site, en plus du SEO technique et la correction de l'accessibilité. J'ai également ajouté le référencement local et les réseaux sociaux, ce qui vise à améliorer la visibilité du site de la photographe et qui contribue à l'augmentation de la notoriété et de l'accessibilité de son activité.",
          "pictures": [
-            "./src/assets/images/projects/nina"
+            "/assets/images/projects/nina"
         ]
     },
     {
         "id": "11202409",
         "title": "724events",
-        "cover": "./src/assets/images/projects/724events2",
+        "cover": "/assets/images/projects/724events2",
         "github": "https://github.com/MMSGIWEB/724events",
         "tools": [
-            "./src/assets/images/svg-tools/javascript.svg"
+            "/assets/images/svg-tools/javascript.svg"
         ],
         "content": "Ce projet consiste à débugger et finaliser le développement d'un site one-page pour une agence d'événementiel. Ici, j'ai identifié et corrigé les bugs, complété le cahier de recette de tests et géré le projet avec des outils de développement.",
          "pictures": [
-            "./src/assets/images/projects/724events"
+            "/assets/images/projects/724events"
         ]
     },
     {
         "id": "11202410",
         "title": "ArgentBank",
-        "cover": "./src/assets/images/projects/argentbank3",
+        "cover": "/assets/images/projects/argentbank3",
         "github": "https://github.com/MMSGIWEB/ArgentBank",
         "tools": [
-            "./src/assets/images/svg-tools/html.svg",
-            "./src/assets/images/svg-tools/css.svg",
-            "./src/assets/images/svg-tools/react.svg",
-            "./src/assets/images/svg-tools/javascript.svg",
-            "./src/assets/images/svg-tools/redux.svg"
+            "/assets/images/svg-tools/html.svg",
+            "/assets/images/svg-tools/css.svg",
+            "/assets/images/svg-tools/react.svg",
+            "/assets/images/svg-tools/javascript.svg",
+            "/assets/images/svg-tools/redux.svg"
         ],
         "content": "Ce projet consiste à développer le front-end d'une application bancaire en utilisant React et Redux pour offrir une expérience utilisateur dynamique et réactive. ",
          "pictures": [
-            "./src/assets/images/projects/argentbank",
-            "./src/assets/images/projects/argentbank2"
+            "/assets/images/projects/argentbank",
+            "/assets/images/projects/argentbank2"
         ]
     },
     {
         "id": "11202411",
         "title": "Qwenta",
-        "cover": "./src/assets/images/projects/qwenta",
+        "cover": "/assets/images/projects/qwenta",
         "github": "https://github.com/MMSGIWEB/Qwenta",
         "content": "Ce projet consiste à planifier et documenter le développement d'un site web en utilisant des spécifications fonctionnelles et techniques, ainsi qu'en organisant un tableau Kanban. Ensuite, j'ai dû découper les tâches, estimer leur complexité et préparer une présentation finale pour le Product Owner du projet."
     }

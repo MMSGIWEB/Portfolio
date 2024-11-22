@@ -1,8 +1,7 @@
 [
     {
         "title": "Welcome to my Portfolio !",
-        "intro": "This is my portfolio and it contains all my projects from my training to now. This site will be updated as new projects are completed. So to be updated just subscribe on this link bellow.",
-        "skills": [
+        "intro": "Ceci est mon portfolio et il contient tous mes projets depuis ma formation jusqu'à maintenant. Ce site sera mis à jour au fur et à mesure que de nouveaux projets seront terminés. Donc pour être mis à jour, abonnez-vous simplement sur ce lien ci-dessous.",        "skills": [
             "./src/assets/images/svg-tools/canva.svg",
             "./src/assets/images/svg-tools/css.svg",
             "./src/assets/images/svg-tools/figma.svg",

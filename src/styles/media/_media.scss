@@ -1,6 +1,7 @@
 @import "../details/mixin";
 
 @media screen and (max-width: 900px) {
+
   /*barre de navigation*/
   .navbar {
     gap: 3em;
@@ -49,6 +50,7 @@
     img {
       width: 50%;
     }
+
     p {
       font-size: 2em;
       text-wrap: wrap;

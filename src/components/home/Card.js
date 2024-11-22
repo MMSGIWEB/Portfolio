@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import appts from "../../datas/logements.json"
+import projects from "../../datas/projects.json"
 
 
 function Card() {
@@ -8,13 +8,15 @@ function Card() {
     return (
         <>
             {/* itération de la liste d'appartements */}
-            {appts.map((appt) => {
+            {projects.map((project) => {
                 return (
-                    <article key={appt.id}>
-                        <NavLink to={`/fiche/${appt.id}`} className="cardLink">
-                            <div className="card">
-                                <img src={appt.cover} alt={appt.title} className="cardImg" />
-                                <h2 className="cardTitle">{appt.title}</h2>
+                    <article key={project.id}>
+                        <NavLink to={`/project/${project.id}`} className="cardLink">
+                            <div className="cardLink">
+                                <div className="card">
+                                    <img src={project.cover} alt={project.title} className="cardImg" />
+                                    <h2 className="cardTitle">{project.title}</h2>
+                                </div>
                             </div>
                         </NavLink>
                     </article>

@@ -1,6 +1,6 @@
 [
     {
-        "content": "Je m'appelle Maria...",
+        "content": "Hello! Je m'appelle Maria et j'ai entrepris la formation de développeuse Frontend. Au cours de cette période j'ai exploré les bases du web et ce fut une expérience qui m'a captivé, passionnée et permis d'explorer mes capacités, mes limites et celles je peux dépasser. Elle a eu un réel impact sur moi et ma vision des choses. Je souhaite approfondir davantage mes acquis et connaissances dans ce domaine,un peu plus, afin d'en devenir une experte et atteindre mes objectifs.",
         "course1":[
             {
                 "title": "FORMATION INTÉGRATRICE WEB",
@@ -12,10 +12,6 @@
                 "date": "2017",
                 "trainingCenter": "LYCÉE RENÉ CASSIN - GONESSE"  
             }
-        ],
-        "certifications": [
-            
         ]
-
     }
 ]

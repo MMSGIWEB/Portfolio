@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import appts from "../../datas/logements.json"
+import projects from "../../datas/projects.json"
 import { useParams } from "react-router-dom";
 
 function Slideshow() {
-    //on extrait la v 'id' pour récup de l'id de la fiche concernée
     const { id } = useParams()
-    //fait correspondre l'id à celui du logement
-    const logement = appts.find((appt) => appt.id === id)
-    //valeur d'état + fonction pour mettre à jour l'état d'affichage du slider
+    const work = projects.find((project) => project.id === id)
     const [currentPicture, setCurrentPicture] = useState(0)
 
     //fonction qui donne une classe à l'image affichée
@@ -21,18 +18,18 @@ function Slideshow() {
     //décompte des img sous format "nb/nbTotalimg"
     const getFormattedImageCount = () => {
         if (pictures.length > 1) {
-            const totalImageCount = logement?.pictures.length;
+            const totalImageCount = work?.pictures.length;
             const currentImageCount = currentPicture + 1;
 
             return `${currentImageCount}/${totalImageCount}`
         }
     }
 
-    //récup des images pour chaque fiche logement
-    //opérateur de sécu optionnel vérifie si 'logement' existe bien avant d'acceder au tableau
-    const pictures = logement?.pictures.map((picture, i) => {
+    //récup des images pour chaque fiche work
+    //opérateur de sécu optionnel vérifie si 'work' existe bien avant d'acceder au tableau
+    const pictures = work?.pictures.map((picture, i) => {
         return (
-            <img key={i} src={picture} alt="image du logement" className={getClassName(i)} />
+            <img key={i} src={picture} alt="image du work" className={getClassName(i)} />
         )
     })
 
@@ -81,4 +78,4 @@ function Slideshow() {
     )
 }
 
-export default Slideshow
+export default Slideshow;

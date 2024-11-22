@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import Fiche from './pages/Fiche';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/about';
+import ProjectInfo from './components/fiche/info';
+// import Modal from './pages/modal';
 
 // Configuration du routeur avec le flag "v7_fetcherPersist"
 const router = createBrowserRouter(
@@ -13,8 +14,8 @@ const router = createBrowserRouter(
       element: <App />,
     },
     {
-      path: "/fiche/:id", // Route avec paramètre d'URL
-      element: <Fiche />,
+      path: "/project/:id", // Route avec paramètre d'URL
+      element: <ProjectInfo />,
     },
     {
       path: "/about",
