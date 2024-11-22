@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { a, NavLink } from "react-router-dom";
 import logo from '../../assets/images/logo/logolast.png'
 
 function Navbar() {
@@ -9,21 +9,21 @@ function Navbar() {
                 <img src={logo} alt="logo" />
             </div>
             <nav className="navigation" >
-                <NavLink to="/" className="link indexLink">
+                <NavLink to="/Portfolio" className="link indexLink">
                     <div className="index" >HOME</div>
                 </NavLink>
-                <NavLink to="/about" className="link aboutLink">
+                <a className="link aboutLink">
                     <div className="about" >PROJECTS</div>
-                </NavLink>
-                <NavLink to="/about" className="link aboutLink">
+                </a>
+                <a className="link aboutLink">
                     <div className="about" >SKILLS</div>
-                </NavLink>
-                <NavLink to="/about" className="link aboutLink">
+                </a>
+                <a className="link aboutLink">
                     <div className="about" >ABOUT</div>
-                </NavLink>
-                <div className="link aboutLink">
+                </a>
+                <NavLink to="Contact" className="link aboutLink">
                     <div className="about" >CONTACT</div>
-                </div>
+                </NavLink>
             </nav>
         </header>
     )

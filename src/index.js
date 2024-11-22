@@ -3,24 +3,45 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/about';
-import ProjectInfo from './components/fiche/info';
-// import Modal from './pages/modal';
+import ProjectInfo from './pages/info';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
+import Contact from './pages/contact';
 
 // Configuration du routeur avec le flag "v7_fetcherPersist"
 const router = createBrowserRouter(
   [
     {
       path: "/Portfolio",
-      element: <App />,
+      element: <App />
     },
     {
       path: "/project/:id", // Route avec paramètre d'URL
-      element: <ProjectInfo />,
+      element:
+        <>
+          <Navbar />
+          <ProjectInfo />
+          <Footer />
+        </>
     },
     {
       path: "/about",
-      element: <About />,
+      element:
+        <>
+          <Navbar />
+          <About />
+          <Footer />
+        </>
     },
+    {
+      path: "/contact",
+      element:
+        <>
+          <Navbar />
+          <Contact />
+          <Footer />
+        </>
+    }
   ],
   {
     future: {

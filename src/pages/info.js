@@ -1,6 +1,6 @@
-import projects from "../../datas/projects.json"
+import projects from "../datas/projects.json"
 import { useParams } from "react-router-dom";
-import Slideshow from "./Slideshow";
+import Slideshow from "../components/fiche/Slideshow";
 
 function ProjectInfo() {
     //récup de l'id de la fiche concernée

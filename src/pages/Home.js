@@ -9,7 +9,7 @@ function Home() {
             <main className="index">
                 <Appts />
             </main>
-            <Footer img={"footerLogo"} copyRights="© 2020 Kasa. All rights reserved" />
+            <Footer />
         </>
     )
 }
