@@ -6,14 +6,7 @@ function Slideshow() {
     const { id } = useParams()
     const work = projects.find((project) => project.id === id)
     const [currentPicture, setCurrentPicture] = useState(0)
-
-    //fonction qui donne une classe à l'image affichée
-    const getClassName = (i) => {
-        if (i === currentPicture) {
-            return "currentImg";
-            return ""
-        }
-    }
+    const source = ""
 
     //décompte des img sous format "nb/nbTotalimg"
     const getFormattedImageCount = () => {
@@ -27,11 +20,19 @@ function Slideshow() {
 
     //récup des images pour chaque fiche work
     //opérateur de sécu optionnel vérifie si 'work' existe bien avant d'acceder au tableau
-    const pictures = work?.pictures.map((picture, i) => {
-        return (
-            <img key={i} src={picture} alt="image du work" className={getClassName(i)} />
-        )
-    })
+    const pictures = work?.pictures.map((picture, index) => {
+        if (work.pictures.length > 0) {
+            return (
+                <img
+                    key={index}
+                    src={`../../assets/images/projects/${picture}`}
+                    alt="image du work"
+                    className="current-img"
+                />
+            );
+        }
+        return null; // Si la condition n'est pas remplie, rien ne sera rendu
+    });
 
     const moveToNext = () => {
         //currentState va changer de 1 à 1, sans dépasser la longueur du nb d'img
@@ -43,16 +44,16 @@ function Slideshow() {
 
         setCurrentPicture((currentPicture - 1 + pictures.length) % pictures.length);
 
-        // //notre constante équivaut l'img actuelle - 1 lorsqu'on on arrive à la fin du nb d'imgs
-        // const afterPictureLength = currentPicture - 1
-        // //mais si c'est inférieur à 0 on applique 
-        // if (afterPictureLength < 0) {
-        //     //application du changement d'img avec le code en ()
-        //     setCurrentPicture(pictures.length - 1)
-        //     return
-        // }
-        // //sinon le code habituel pour le changement d'img
-        // setCurrentPicture((currentPicture - 1) % pictures.length)
+        //notre constante équivaut l'img actuelle - 1 lorsqu'on on arrive à la fin du nb d'imgs
+        const afterPictureLength = currentPicture - 1
+        //mais si c'est inférieur à 0 on applique 
+        if (afterPictureLength < 0) {
+            //application du changement d'img avec le code en ()
+            setCurrentPicture(pictures.length - 1)
+            return
+        }
+        //sinon le code habituel pour le changement d'img
+        setCurrentPicture((currentPicture - 1) % pictures.length)
     }
 
 

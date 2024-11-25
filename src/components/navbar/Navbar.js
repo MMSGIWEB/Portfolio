@@ -12,16 +12,16 @@ function Navbar() {
                 <NavLink to="/Portfolio" className="link indexLink">
                     <div className="index" >HOME</div>
                 </NavLink>
-                <a className="link aboutLink">
+                <a href="#projects" className="link aboutLink">
                     <div className="about" >PROJECTS</div>
                 </a>
-                <a className="link aboutLink">
+                <a href="#skills" className="link aboutLink">
                     <div className="about" >SKILLS</div>
                 </a>
-                <a className="link aboutLink">
+                <NavLink to="/about" href="#about" className="link aboutLink">
                     <div className="about" >ABOUT</div>
-                </a>
-                <NavLink to="Contact" className="link aboutLink">
+                </NavLink>
+                <NavLink to="/Contact" className="link aboutLink">
                     <div className="about" >CONTACT</div>
                 </NavLink>
             </nav>

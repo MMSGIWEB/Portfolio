@@ -6,7 +6,8 @@ import projects from "../../datas/projects.json"
 function Card() {
 
     return (
-        <>
+        <section id="projects" className="cardsContainer">
+
             {/* itération de la liste d'appartements */}
             {projects.map((project) => {
                 return (
@@ -25,7 +26,7 @@ function Card() {
 
             })}
 
-        </>
+        </section>
     )
 }
 

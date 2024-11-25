@@ -8,28 +8,23 @@ function ProjectInfo() {
     //fait correspondre l'id à celui du work
     const work = projects.find((project) => project.id === id)
 
+    const tools = work?.tools?.map((tool, index) => {
+        <img key={index} src={`../assets/images/svg-tools/${tool}`} alt={`Tool ${index + 1}`} className="tool-logo" width="50" />
+    })
     return (
         <>
-            <div className="modal-content">
-                <div className="modal-block">
+            <div className="project-content">
+                <div className="project-block">
                     <div className="content">
                         <h1>{work?.title}</h1>
                         <div className="info">
                             <p>{work?.content}</p>
                             <Slideshow />
-                            {projects.map((project) => {
-                                return (
-                                    <div className="tools" >
-                                        <div className="tools-logos">
-                                            {work?.tools?.map((tool, index) => {
-                                                <img key={index} src={tool} alt={`Tool ${index + 1}`} className="tool-logo" width="50" />
-                                            })
-                                            }
-                                        </div>
-                                    </div>
-                                )
-                            })}
-
+                            <div className="tools" >
+                                <div className="tools-logos">
+                                    {tools}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
