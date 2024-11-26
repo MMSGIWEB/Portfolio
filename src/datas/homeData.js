@@ -36,14 +36,6 @@ const homeData = [
             trello,
             vscode
         ],
-        "twitter": "insta",
-        "linkedIn": "insta",
-        "insta": "insta",
-        "gitHub": "insta",
-        "name": "Semedo Gonçalves Maria Madalena",
-        "email": "mariaintweb@gmail.com",
-        "contact": "01 12 23 34 45",
-        "location": "93160, Noisy-le-Grand, France"
     }
 ]
 

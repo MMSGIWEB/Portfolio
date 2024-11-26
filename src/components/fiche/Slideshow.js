@@ -35,7 +35,6 @@ function Slideshow() {
 
     const moveToNext = () => {
         //currentState va changer de 1 à 1, sans dépasser la longueur du nb d'img
-        //'%..' limite la longueur de l'arrêt
         setCurrentPicture((currentPicture + 1) % pictures.length)
     }
 
