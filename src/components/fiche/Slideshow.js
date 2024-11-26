@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import projects from "../../datas/projects.json"
+import projectsData from "../../datas/projectsData"
 import { useParams } from "react-router-dom";
 
 function Slideshow() {
     const { id } = useParams()
-    const work = projects.find((project) => project.id === id)
+    const work = projectsData.find((project) => project.id === id)
     const [currentPicture, setCurrentPicture] = useState(0)
     const source = ""
 
@@ -19,13 +19,12 @@ function Slideshow() {
     }
 
     //récup des images pour chaque fiche work
-    //opérateur de sécu optionnel vérifie si 'work' existe bien avant d'acceder au tableau
     const pictures = work?.pictures.map((picture, index) => {
         if (work.pictures.length > 0) {
             return (
                 <img
                     key={index}
-                    src={`../../assets/images/projects/${picture}`}
+                    src={picture}
                     alt="image du work"
                     className="current-img"
                 />

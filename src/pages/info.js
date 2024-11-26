@@ -1,4 +1,4 @@
-import projects from "../datas/projects.json"
+import projects from "../datas/projectsData"
 import { useParams } from "react-router-dom";
 import Slideshow from "../components/fiche/Slideshow";
 
@@ -24,6 +24,14 @@ function ProjectInfo() {
                                 <div className="tools-logos">
                                     {tools}
                                 </div>
+                            </div>
+                        </div>
+                        <div className="links">
+                            <div className="block">
+                                <a href={work.github}>Souce</a>
+                            </div>
+                            <div className="block">
+                                <a href={work.link}>Site</a>
                             </div>
                         </div>
                     </div>

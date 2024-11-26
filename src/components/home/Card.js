@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import projects from "../../datas/projects.json"
+import projects from "../../datas/projectsData"
 
 
 function Card() {
