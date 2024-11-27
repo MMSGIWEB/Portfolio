@@ -1,0 +1,54 @@
+@import "../details/mixin";
+
+
+.infoBanner {
+    @include flexCCC;
+}
+
+.infoBanner {
+    height: 359px;
+    position: relative;
+    border-radius: 25px;
+    width: 440px;
+
+    img {
+        position: absolute;
+        max-height: 359px;
+        border-radius: 25px;
+        z-index: -1;
+        object-position: center;
+        object-fit: contain;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+
+        &.currentImg {
+            opacity: 1;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        background-clip: text;
+        background: transparent;
+        font-size: 3.5em;
+        border: none;
+        cursor: pointer;
+        color: #7d7c7c;
+    }
+
+    .arrowLeft {
+        left: -50px;
+    }
+
+    .arrowRight {
+        right: -50px;
+    }
+
+    .imgCount {
+        font-weight: 500;
+        font-size: 1.5em;
+        position: absolute;
+        bottom: -40px;
+        font-family: 'Montserrat';
+    }
+}

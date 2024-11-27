@@ -14,6 +14,10 @@ body {
   box-sizing: border-box;
   min-width: 590px;
   margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 img {
@@ -41,8 +45,10 @@ header {
   padding: 1.5em 0 0 0;
 }
 header .logo {
-  width: 10%;
+  width: 15%;
   padding-left: 5em;
+  position: relative;
+  top: 1em;
 }
 header nav {
   display: flex;
@@ -144,6 +150,107 @@ header nav a.active {
   text-align: center;
   color: #FFFFFF;
   padding-bottom: 1em;
+}
+
+.project-content,
+.project-block,
+.content,
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.project-content .info {
+  width: 80%;
+}
+.project-content .info p {
+  font-size: 1.8em;
+}
+.project-content .info .infoBanner {
+  border: 2px solid #7d7c7c;
+}
+.project-content .info .tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding-top: 3em;
+}
+.project-content .info .tools img {
+  width: 60px;
+  height: 60px;
+}
+.project-content .links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+  padding-top: 2em;
+}
+.project-content .links button {
+  width: 100px;
+  height: 40px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+
+.infoBanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoBanner {
+  height: 359px;
+  position: relative;
+  border-radius: 25px;
+  width: 440px;
+}
+.infoBanner img {
+  position: absolute;
+  max-height: 359px;
+  border-radius: 25px;
+  z-index: -1;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.infoBanner img.currentImg {
+  opacity: 1;
+}
+.infoBanner .arrow {
+  position: absolute;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background: transparent;
+  font-size: 3.5em;
+  border: none;
+  cursor: pointer;
+  color: #7d7c7c;
+}
+.infoBanner .arrowLeft {
+  left: -50px;
+}
+.infoBanner .arrowRight {
+  right: -50px;
+}
+.infoBanner .imgCount {
+  font-weight: 500;
+  font-size: 1.5em;
+  position: absolute;
+  bottom: -40px;
+  font-family: "Montserrat";
 }
 
 @media screen and (max-width: 900px) {

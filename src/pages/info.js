@@ -9,11 +9,13 @@ function ProjectInfo() {
     const work = projects.find((project) => project.id === id)
 
     const tools = work?.tools?.map((tool, index) => {
-        <img key={index} src={`../assets/images/svg-tools/${tool}`} alt={`Tool ${index + 1}`} className="tool-logo" width="50" />
+        return (
+            <img key={index} src={tool} alt={`Tool ${index + 1}`} className="tool-logo" width="50" />
+        )
     })
     return (
         <>
-            <div className="project-content">
+            <main className="project-content">
                 <div className="project-block">
                     <div className="content">
                         <h1>{work?.title}</h1>
@@ -21,22 +23,24 @@ function ProjectInfo() {
                             <p>{work?.content}</p>
                             <Slideshow />
                             <div className="tools" >
-                                <div className="tools-logos">
-                                    {tools}
-                                </div>
+                                {tools}
                             </div>
                         </div>
                         <div className="links">
                             <div className="block">
-                                <a href={work.github}>Souce</a>
+                                <a href={work.github}>
+                                    <button>Source</button>
+                                </a>
                             </div>
                             <div className="block">
-                                <a href={work.link}>Site</a>
+                                <a href={work.link}>
+                                    <button>Site</button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         </>
     )
 }

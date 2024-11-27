@@ -58,7 +58,6 @@ function About() {
 
     return (
         <main className="about-main">
-            <img src={logo} alt='image de logo' />
             <section className='about-container'>
                 <article className="about-content">
                     <p className="text">

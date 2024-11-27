@@ -6,7 +6,14 @@ function Slideshow() {
     const { id } = useParams()
     const work = projectsData.find((project) => project.id === id)
     const [currentPicture, setCurrentPicture] = useState(0)
-    const source = ""
+
+    //fonction qui donne une classe à l'image affichée
+    const getClassName = (i) => {
+        if (i === currentPicture) {
+            return "currentImg";
+            return ""
+        }
+    }
 
     //décompte des img sous format "nb/nbTotalimg"
     const getFormattedImageCount = () => {
@@ -19,14 +26,14 @@ function Slideshow() {
     }
 
     //récup des images pour chaque fiche work
-    const pictures = work?.pictures.map((picture, index) => {
+    const pictures = work?.pictures.map((picture, i) => {
         if (work.pictures.length > 0) {
             return (
                 <img
-                    key={index}
+                    key={i}
                     src={picture}
                     alt="image du work"
-                    className="current-img"
+                    className={getClassName(i)}
                 />
             );
         }
