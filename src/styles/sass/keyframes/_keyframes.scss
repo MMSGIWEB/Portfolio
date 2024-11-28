@@ -17,3 +17,22 @@
         transform: translateY(-100%);
     }
 }
+
+// loader letters
+@keyframes waiting {
+    0% {
+        color: #592B25;
+        text-shadow: 0 0 7px #592B25;
+    }
+
+    90% {
+        color: whitesmoke;
+        text-shadow: none;
+    }
+
+    100% {
+        color: #592B25;
+        text-shadow: 0 0 7px #592B25;
+
+    }
+}

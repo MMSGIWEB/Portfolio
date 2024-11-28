@@ -152,6 +152,59 @@ header nav a.active {
   padding-bottom: 1em;
 }
 
+.mydata,
+.about-content,
+.list,
+.list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.languages,
+.about-main, .course-content, .course-content .block, .about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-main .about-container {
+  gap: 2em;
+}
+.about-main .about-container .about-content {
+  width: 80%;
+  text-align: center;
+  font-size: 1.5em;
+}
+.about-main .about-container .course-content {
+  font-size: 1.5em;
+  gap: 1.5em;
+}
+.about-main .about-container .list {
+  list-style: none;
+  gap: 2em;
+  font-size: 1.2em;
+  flex-wrap: wrap;
+}
+.about-main .about-container .mydata {
+  width: 100%;
+}
+.about-main .about-container .mydata ul {
+  width: 100%;
+  gap: 2.5em;
+}
+.about-main .about-container .mydata ul li {
+  align-items: center;
+  font-size: 1.2em;
+  gap: 0.6em;
+  height: 44px;
+  text-overflow: ellipsis;
+}
+.about-main .about-container .mydata ul li img {
+  width: 30px;
+}
+
 .project-content,
 .project-block,
 .content,
@@ -167,7 +220,8 @@ header nav a.active {
   width: 80%;
 }
 .project-content .info p {
-  font-size: 1.8em;
+  font-size: 1.5em;
+  text-align: center;
 }
 .project-content .info .infoBanner {
   border: 2px solid #7d7c7c;
@@ -251,6 +305,141 @@ header nav a.active {
   position: absolute;
   bottom: -40px;
   font-family: "Montserrat";
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes waiting {
+  0% {
+    color: #592B25;
+    text-shadow: 0 0 7px #592B25;
+  }
+  90% {
+    color: whitesmoke;
+    text-shadow: none;
+  }
+  100% {
+    color: #592B25;
+    text-shadow: 0 0 7px #592B25;
+  }
+}
+.loader {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8588235294);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -1;
+  animation: loading 2.5s linear;
+}
+.loader .letter {
+  color: white;
+  font-size: 4em;
+  letter-spacing: 1em;
+  animation: waiting 3s linear infinite;
+}
+.loader .letter-1 {
+  animation-delay: 0.1379310345s;
+}
+.loader .letter-2 {
+  animation-delay: 0.275862069s;
+}
+.loader .letter-3 {
+  animation-delay: 0.4137931034s;
+}
+.loader .letter-4 {
+  animation-delay: 0.5517241379s;
+}
+.loader .letter-5 {
+  animation-delay: 0.6896551724s;
+}
+.loader .letter-6 {
+  animation-delay: 0.8275862069s;
+}
+.loader .letter-7 {
+  animation-delay: 0.9655172414s;
+}
+.loader .letter-8 {
+  animation-delay: 1.1034482759s;
+}
+.loader .letter-9 {
+  animation-delay: 1.2413793103s;
+}
+.loader .letter-10 {
+  animation-delay: 1.3793103448s;
+}
+.loader .letter-11 {
+  animation-delay: 1.5172413793s;
+}
+.loader .letter-12 {
+  animation-delay: 1.6551724138s;
+}
+.loader .letter-13 {
+  animation-delay: 1.7931034483s;
+}
+.loader .letter-14 {
+  animation-delay: 1.9310344828s;
+}
+.loader .letter-15 {
+  animation-delay: 2.0689655172s;
+}
+.loader .letter-16 {
+  animation-delay: 2.2068965517s;
+}
+.loader .letter-17 {
+  animation-delay: 2.3448275862s;
+}
+.loader .letter-18 {
+  animation-delay: 2.4827586207s;
+}
+.loader .letter-19 {
+  animation-delay: 2.6206896552s;
+}
+.loader .letter-20 {
+  animation-delay: 2.7586206897s;
+}
+.loader .letter-21 {
+  animation-delay: 2.8965517241s;
+}
+.loader .letter-22 {
+  animation-delay: 3.0344827586s;
+}
+.loader .letter-23 {
+  animation-delay: 3.1724137931s;
+}
+.loader .letter-24 {
+  animation-delay: 3.3103448276s;
+}
+.loader .letter-25 {
+  animation-delay: 3.4482758621s;
+}
+.loader .letter-26 {
+  animation-delay: 3.5862068966s;
+}
+.loader .letter-27 {
+  animation-delay: 3.724137931s;
+}
+.loader .letter-28 {
+  animation-delay: 3.8620689655s;
+}
+.loader .letter-29 {
+  animation-delay: 4s;
 }
 
 @media screen and (max-width: 900px) {

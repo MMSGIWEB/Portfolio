@@ -7,18 +7,25 @@ import ProjectInfo from './pages/info';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Contact from './pages/contact';
+import Loader from './components/loader/loader';
 
 // Configuration du routeur avec le flag "v7_fetcherPersist"
 const router = createBrowserRouter(
   [
     {
       path: "/Portfolio",
-      element: <App />
+      element:
+        <>
+          <Loader />
+          <App />
+        </>
+
     },
     {
       path: "/project/:id", // Route avec paramètre d'URL
       element:
         <>
+          <Loader />
           <Navbar />
           <ProjectInfo />
           <Footer />
@@ -28,6 +35,7 @@ const router = createBrowserRouter(
       path: "/about",
       element:
         <>
+          <Loader />
           <Navbar />
           <About />
           <Footer />
@@ -37,6 +45,7 @@ const router = createBrowserRouter(
       path: "/contact",
       element:
         <>
+          <Loader />
           <Navbar />
           <Contact />
           <Footer />

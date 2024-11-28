@@ -1,0 +1,61 @@
+@import "../details/mixin";
+
+.mydata,
+.about-content,
+.list,
+.list li {
+    @include flexcc
+}
+
+.languages,
+.about-main, .course-content, .course-content .block, .about-container {
+    @include flexCCC;
+}
+
+.about-main {
+
+    .about-container {
+        gap: 2em;
+
+        .about-content {
+            width: 80%;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .course-content {
+            font-size: 1.5em;
+            gap: 1.5em;
+        }
+
+        .list {
+            list-style: none;
+            gap: 2em;
+            font-size: 1.2em;
+            flex-wrap: wrap;
+        }
+
+        .mydata {
+            width: 100%;
+
+            ul {
+                width: 100%;
+                gap: 2.5em;
+
+                li {
+                    align-items: center;
+                    font-size: 1.2em;
+                    gap: .6em;
+                    height: 44px;
+                    text-overflow: ellipsis;
+
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

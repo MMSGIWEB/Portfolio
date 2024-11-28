@@ -1,0 +1,28 @@
+@import '../keyframes/keyframes';
+@import '../details/variables';
+
+.loader {
+    position: fixed;
+    inset: 0;
+    background-color: #000000db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+    animation: loading 2.5s linear;
+
+    .letter {
+        color: white;
+        font-size: 4em;
+        letter-spacing: 1em;
+        animation: waiting 3s linear infinite;
+
+        // boucle sass
+        @for $i from 1 through $num-elem2 {
+            &-#{$i} {
+                animation-delay: $anim-delay2 * $i;
+            }
+        }
+    }
+}

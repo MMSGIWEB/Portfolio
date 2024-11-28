@@ -22,11 +22,9 @@ function About() {
         )
     })
 
-    const languages = content?.languages?.map((language, index) => {
+    const languages = content?.languages?.map((language) => {
         return (
-            <ul key={index} className='list'>
-                <li>{language}</li>
-            </ul>
+            <li>{language}</li>
         )
     })
 
@@ -37,17 +35,25 @@ function About() {
                     <img src={user} alt="icône équivalent au type d'information" />
                     {data.name} </li>
                 <li>
-                    <img src={mail} alt="icône équivalent au type d'information" />
-                    {data.email} </li>
+                    <a href={data.email}>
+                        <img src={mail} alt="icône équivalent au type d'information" />
+                    </a>
+                </li>
                 <li>
-                    <img src={twitter} alt="icône équivalent au type d'information" />
-                    {data.twitter} </li>
+                    <a href={data.twitter}>
+                        <img src={twitter} alt="icône équivalent au type d'information" />
+                    </a>
+                </li>
                 <li>
-                    <img src={linkedIn} alt="icône équivalent au type d'information" />
-                    {data.linkedIn} </li>
+                    <a href={data.linkedIn}>
+                        <img src={linkedIn} alt="icône équivalent au type d'information" />
+                    </a>
+                </li>
                 <li>
-                    <img src={gitHub} alt="icône équivalent au type d'information" />
-                    {data.gitHub} </li>
+                    <a href={data.gitHub}>
+                        <img src={gitHub} alt="icône équivalent au type d'information" />
+                    </a>
+                </li>
                 <li>
                     <img src={location} alt="icône équivalent au type d'information" />
                     {data.location} </li>
@@ -65,11 +71,14 @@ function About() {
                     </p>
                 </article>
                 <article className='course-content'>
-                    <h1>COURSE</h1>
+                    <h1>PARCOURS</h1>
                     {course}
                 </article>
                 <article className='languages'>
-                    {languages}
+                    <h2>LANGUES</h2>
+                    <ul className='list'>
+                        {languages}
+                    </ul>
                 </article>
                 <article className='mydata'>
                     {mydata}
