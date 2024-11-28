@@ -1,31 +1,41 @@
-import { useState } from "react"
-
+import { useState, useEffect } from "react";
 
 function Loader() {
-    const { count, setCount } = useState(1)
-    const letterCount = () => {
-        setCount((prevCount) => (prevCount < letters.length ? prevCount + 1 : 1));
-    }
+    const [count, setCount] = useState(1); // Nombre de mots affichés
 
     const letters = [
-        "P", "A", "S", "S", "I", "O", "N", "", "", "", "",
-        "L", "E", "D", "", "", "", "", "", "U", "S", "", "", "", "",
-        "H", "E", "R", "E"
-    ]
+        ["P", "A", "S", "S", "I", "O", "N"],
+        ["L", "E", "D"],
+        ["U", "S"],
+        ["H", "E", "R", "E"],
+    ];
 
-    const loading = letters.map((letter, index) => {
-        return (
-            <>
-                <span class={`letter letter-${index + 1}`}>{letter}</span>
-            </>
-        )
-    })
+    // Effet pour gérer l'affichage progressif des mots
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCount((prevCount) => (prevCount < letters.length ? prevCount + 1 : 1));
+        }, 1000); // Mise à jour toutes les 1 seconde
+        return () => clearInterval(interval);
+    }, [letters.length]);
 
     return (
-        <div class="loader">
-            {loading}
+        <div className="loader">
+            <div className="container">
+                {letters.slice(0, count).map((word, wordIndex) => (
+                    <div key={wordIndex} className={`word word-${wordIndex + 1}`}>
+                        {word.map((letter, letterIndex) => (
+                            <span
+                                key={letterIndex}
+                                className={`letter letter-${letterIndex + 1}`}
+                            >
+                                {letter}
+                            </span>
+                        ))}
+                    </div>
+                ))}
+            </div>
         </div>
-    )
+    );
 }
 
 export default Loader;

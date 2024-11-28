@@ -1,21 +1,17 @@
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
-import logo from "../assets/images/logo/logolast.png"
 import Card from "../components/home/Card";
-import SkillsSlider from "../components/home/skills";
+import SkillsSlider from "../components/home/toolsSlider";
+import homeData from "../datas/homeData";
 
 function Home() {
+
     return (
         <>
             <Navbar />
             <main className="index">
                 <section className="top">
-                    <div className="logo-container">
-                        <h1 className="title">MariaIntWeb</h1>
-                        <div className="line"></div>
-                        <p className="under-title">Développeuse Front-end / Intégratrice Web</p>
-                    </div>
-                    <div className="intro">text</div>
+                    <p className="intro">{homeData[0].intro}</p>
                 </section>
                 <Card />
                 <SkillsSlider />

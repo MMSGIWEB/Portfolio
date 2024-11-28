@@ -1,28 +1,66 @@
 @import '../keyframes/keyframes';
 @import '../details/variables';
+@import '../details/mixin';
 
 .loader {
     position: fixed;
     inset: 0;
     background-color: #000000db;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCCC;
     opacity: 0;
     z-index: -1;
-    animation: loading 2.5s linear;
+    animation: loading 4s linear;
+    width: 100%;
 
-    .letter {
-        color: white;
-        font-size: 4em;
-        letter-spacing: 1em;
-        animation: waiting 3s linear infinite;
+    .container {
+        @include flexCCC;
+        gap: 1rem;
+        text-align: center;
+        width: 50%;
+    }
 
-        // boucle sass
+    .word {
+        display: flex;
+        justify-content: center;
+        gap: 0.2rem; // Espace entre les lettres
+
         @for $i from 1 through $num-elem2 {
             &-#{$i} {
                 animation-delay: $anim-delay2 * $i;
             }
         }
+
+        .letter {
+            color: white;
+            font-size: 4em;
+            letter-spacing: 0.1em;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 4s ease-in-out backwards;
+
+            // Sass loop pour gérer les délais des lettres
+            @for $i from 1 through $num-elem {
+                &-#{$i} {
+                    animation-delay: $anim-delay * $i;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateX(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

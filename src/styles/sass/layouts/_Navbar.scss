@@ -3,13 +3,13 @@
 header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 1.5em 0 0 0;
+    gap: 2em;
 
     .logo {
         width: 15%;
-        padding-left: 5em;
         position: relative;
         top: 1em;
     }
@@ -18,10 +18,11 @@ header {
         display: flex;
         justify-content: space-between;
         gap: 3.5em;
-        padding-right: 5em;
+        @include glassEffect;
 
         .link {
             @include flexcc;
+            // @include glassEffect;
 
             &:active {
                 @include blackUnderline;
@@ -32,12 +33,11 @@ header {
             }
 
             div {
-                color: #000000;
+                color: #fff;
                 font-family: "DM Serif Display", serif !important;
-                font-weight: 400;
+                font-weight: 500;
                 text-wrap: nowrap;
-                padding: 1em 0 0 0;
-                font-size: 1.5em;
+                font-size: 2em;
             }
         }
     }

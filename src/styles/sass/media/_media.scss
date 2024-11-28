@@ -9,106 +9,128 @@
     .logo {
       width: 40%;
     }
-
-    .navigation {
-      gap: 2em;
-
-      .link {
-        font-size: 1.2em;
-      }
-    }
   }
 
-  .cardsContainer {
+}
+
+.cardsContainer {
+  @include flexCCC;
+  background: #ffffff;
+
+  article,
+  .card {
+    width: 100%;
+
+    .cardImg {
+      height: 60px !important;
+    }
+  }
+}
+
+.slider {
+  display: none !important;
+}
+
+.skills-slider {
+  display: flex !important;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+
+  .slides-container {
+    overflow: hidden;
+    width: 80%;
+  }
+
+  .slides {
+    @include flexcc;
+    transition: transform 0.5s ease-in-out;
+    gap: 1em;
+  }
+
+  .slide {
     @include flexCCC;
-    background: #ffffff;
+    text-align: center;
+    @include glassEffect;
 
-    article,
-    .card {
-      width: 100%;
+    .tool-icon {
+      width: 50px; // Taille des icônes
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .tool-name {
+      font-size: 1rem;
+      font-weight: bold;
     }
   }
 
-  .footer {
-    @include flexCCC;
-    height: 300px;
-    margin: 0 -2em -1em -2em;
+  .control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
 
-    .footerLogo {
-      width: 22%;
+    &.prev {
+      left: 50px;
     }
 
-    .footerCopyRights {
-      width: 160px;
-      font-size: 1.1em;
-      text-wrap: wrap;
-    }
-  }
-
-  /****Page 404****/
-  .errorPageContainer {
-    img {
-      width: 50%;
-    }
-
-    p {
-      font-size: 2em;
-      text-wrap: wrap;
-      padding: 3em 6em;
+    &.next {
+      right: 50px;
     }
   }
+}
 
-  /*****fiche logement******/
-  .infoHeader,
-  .details {
-    flex-direction: column;
-    gap: 0 !important;
+.footer {
+  @include flexCCC;
+  height: 300px;
+  margin: 0 -2em -1em -2em;
+
+  .footerLogo {
+    width: 22%;
   }
 
-  .infoHeader {
-    .titleContent {
+  .footerCopyRights {
+    width: 160px;
+    font-size: 1.1em;
+    text-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mobVbox {
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    max-height: 160px;
+
+    .mobV {
+      border-radius: 10px !important;
+      @include flexCCC;
       gap: 1em;
+      z-index: 1;
 
-      .titles {
-        h1 {
-          padding-bottom: 0.2em;
-          font-size: 2.8em !important;
-          line-height: 55.34px !important;
+      button {
+        width: 100px;
+        height: 100px;
+
+        .fa-bars {
+          font-size: 5em;
+          color: #a59b8d;
         }
-
-        p {
-          font-size: 28px !important;
-        }
       }
 
-      .tags {
-        width: 100%;
+      .mobNav {
+        @include flexCCC;
+        gap: 1em;
       }
-    }
-
-    .userContent {
-      flex-direction: row-reverse !important;
-      justify-content: space-between !important;
-      align-items: center !important;
-
-      .userPic {
-        width: 24% !important;
-      }
-
-      .rating {
-        // height: 100%;
-        justify-content: flex-start !important;
-        // align-items: flex-end!important;
-      }
-    }
-  }
-
-  .details {
-    flex-direction: column !important;
-    gap: 2em !important;
-
-    .collapseContent {
-      width: 100%;
     }
   }
 }

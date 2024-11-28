@@ -45,7 +45,7 @@
     flex-direction: row;
 }
 
-@mixin flexColumn{
+@mixin flexColumn {
     display: flex;
     flex-direction: column;
 }
@@ -53,5 +53,13 @@
 //details
 @mixin blackUnderline {
     text-decoration: underline;
-    color: #000000;
+    color: #fff;
+}
+
+//glassMorphism
+@mixin glassEffect {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: .5em;
 }

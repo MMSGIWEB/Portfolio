@@ -12,15 +12,25 @@
     @include flexCCC;
 }
 
+.about-content,
+.course-content,
+.languages {
+    @include glassEffect;
+}
+
 .about-main {
 
     .about-container {
         gap: 2em;
+        padding-top: 2em;
 
         .about-content {
             width: 80%;
             text-align: center;
-            font-size: 1.5em;
+
+            p {
+                font-size: 2em;
+            }
         }
 
         .course-content {
@@ -28,11 +38,20 @@
             gap: 1.5em;
         }
 
+        .languages {
+            width: 70%;
+
+            .list {
+                font-size: 1.5em;
+            }
+        }
+
+
         .list {
             list-style: none;
-            gap: 2em;
-            font-size: 1.2em;
+            gap: 1.5em;
             flex-wrap: wrap;
+            font-size: 1.2em;
         }
 
         .mydata {
@@ -40,7 +59,7 @@
 
             ul {
                 width: 100%;
-                gap: 2.5em;
+                gap: 1.5em;
 
                 li {
                     align-items: center;
@@ -48,9 +67,18 @@
                     gap: .6em;
                     height: 44px;
                     text-overflow: ellipsis;
+                    @include glassEffect;
+
+
+                    a {
+                        color: #fff;
+                        display: flex;
+                        gap: 0.6em;
+                    }
 
                     img {
                         width: 30px;
+                        color: #fff;
                     }
                 }
             }

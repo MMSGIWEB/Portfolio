@@ -29,12 +29,15 @@ function Slideshow() {
     const pictures = work?.pictures.map((picture, i) => {
         if (work.pictures.length > 0) {
             return (
-                <img
-                    key={i}
-                    src={picture}
-                    alt="image du work"
-                    className={getClassName(i)}
-                />
+                <div className="block">
+                    <img
+                        key={i}
+                        src={picture}
+                        alt="image du work"
+                        className={getClassName(i)}
+                    />
+                </div>
+
             );
         }
         return null; // Si la condition n'est pas remplie, rien ne sera rendu

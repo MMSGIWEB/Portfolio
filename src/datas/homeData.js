@@ -18,7 +18,7 @@ import vscode from '../assets/images/svg-tools/vscode.svg'
 const homeData = [
     {
         "title": "Welcome to my Portfolio !",
-        "intro": "Ceci est mon portfolio et il contient tous mes projets depuis ma formation jusqu'à maintenant. Ce site sera mis à jour au fur et à mesure que de nouveaux projets seront terminés. Donc pour être mis à jour, abonnez-vous simplement sur ce lien ci-dessous.",
+        "intro": "Ceci est mon portfolio et il expose tous mes projets depuis ma formation jusqu'à maintenant. Ce site sera mis à jour au fur et à mesure que de nouveaux projets seront terminés. Bonne visite !",
         "tools": [
             canva,
             css,

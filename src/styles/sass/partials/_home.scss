@@ -1,1 +1,21 @@
 @import "../details/mixin";
+
+.skills-container {
+    @include flexCCC;
+    gap: 1.5em;
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+.top {
+    @include flexcc;
+    margin-top: 2em;
+
+    .intro {
+        width: 80%;
+        @include glassEffect;
+        font-size: 1.5em;
+    }
+}

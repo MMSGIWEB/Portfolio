@@ -1,4 +1,8 @@
 // k-waiting
-$num-elem2: 29;
-$anim-dur2: 4s;
+$num-elem2: 3;
+$anim-dur2: 6s;
 $anim-delay2: calc($anim-dur2 / $num-elem2);
+
+$num-elem: 17;
+$anim-dur: 5s;
+$anim-delay: calc($anim-dur / $num-elem);

@@ -1,5 +1,5 @@
 import about from './../datas/aboutMe.json'
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import logo from './../assets/images/logo/logolast.png';
 import twitter from '../assets/images/icons/x.svg'
 import mail from '../assets/images/icons/at.svg'
@@ -35,9 +35,10 @@ function About() {
                     <img src={user} alt="icône équivalent au type d'information" />
                     {data.name} </li>
                 <li>
-                    <a href={data.email}>
+                    <NavLink to="/contact">
                         <img src={mail} alt="icône équivalent au type d'information" />
-                    </a>
+                        {data.email}
+                    </NavLink>
                 </li>
                 <li>
                     <a href={data.twitter}>
@@ -71,12 +72,12 @@ function About() {
                     </p>
                 </article>
                 <article className='course-content'>
-                    <h1>PARCOURS</h1>
+                    <h1>DIPLÔMES / FORMATIONS</h1>
                     {course}
                 </article>
                 <article className='languages'>
                     <h2>LANGUES</h2>
-                    <ul className='list'>
+                    <ul className='list langs'>
                         {languages}
                     </ul>
                 </article>

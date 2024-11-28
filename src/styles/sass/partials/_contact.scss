@@ -1,1 +1,59 @@
 @import "../details/mixin";
+
+fieldset,
+form {
+    @include flexColumn;
+
+}
+
+.contact-main h1,
+.contact-main p,
+.contact-main form {
+    @include glassEffect;
+    padding: .5em;
+}
+
+.contact-main {
+    gap: 1em;
+
+    p {
+        font-size: 1.5em;
+    }
+
+    form {
+        @include glassEffect;
+
+        fieldset {
+            border: none;
+            gap: .5em;
+
+            label {
+                justify-self: start;
+                font-size: 1.2em;
+            }
+
+            input {
+                height: 30px;
+                width: 400px;
+                border-radius: 10px;
+            }
+
+            .text {
+                height: 150px;
+                border-radius: 10px;
+                font-size: 1.5em;
+                overflow: scroll;
+            }
+        }
+
+        button {
+            height: 40px;
+            width: 130px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            background: #c36d7d;
+            justify-self: center;
+            margin: 1em .8em;
+        }
+    }
+}
