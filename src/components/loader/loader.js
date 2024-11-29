@@ -14,7 +14,7 @@ function Loader() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCount((prevCount) => (prevCount < letters.length ? prevCount + 1 : 1));
-        }, 1000); // Mise à jour toutes les 1 seconde
+        }, 1500); // Mise à jour toutes les 1 seconde
         return () => clearInterval(interval);
     }, [letters.length]);
 

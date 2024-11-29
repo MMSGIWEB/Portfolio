@@ -383,6 +383,7 @@ form {
   border-radius: 15px;
   padding: 0.5em;
   font-size: 1.5em;
+  text-align: center;
 }
 
 .infoBanner {
@@ -478,6 +479,18 @@ form {
   }
   100% {
     opacity: 0;
+    z-index: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .loader {
@@ -490,7 +503,7 @@ form {
   align-items: center;
   opacity: 0;
   z-index: -1;
-  animation: loading 4s linear;
+  animation: loading 5s linear;
   width: 100%;
 }
 .loader .container {
@@ -506,14 +519,19 @@ form {
   display: flex;
   justify-content: center;
   gap: 0.2rem;
+  transform: translateY(-20px);
+  animation: fadeIn 4s ease-in-out forwards;
 }
 .loader .word-1 {
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 .loader .word-2 {
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 .loader .word-3 {
+  animation-delay: 4.5s;
+}
+.loader .word-4 {
   animation-delay: 6s;
 }
 .loader .word .letter {
@@ -521,75 +539,9 @@ form {
   font-size: 4em;
   letter-spacing: 0.1em;
   opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeIn 4s ease-in-out backwards;
-}
-.loader .word .letter-1 {
-  animation-delay: 0.2941176471s;
-}
-.loader .word .letter-2 {
-  animation-delay: 0.5882352941s;
-}
-.loader .word .letter-3 {
-  animation-delay: 0.8823529412s;
-}
-.loader .word .letter-4 {
-  animation-delay: 1.1764705882s;
-}
-.loader .word .letter-5 {
-  animation-delay: 1.4705882353s;
-}
-.loader .word .letter-6 {
-  animation-delay: 1.7647058824s;
-}
-.loader .word .letter-7 {
-  animation-delay: 2.0588235294s;
-}
-.loader .word .letter-8 {
-  animation-delay: 2.3529411765s;
-}
-.loader .word .letter-9 {
-  animation-delay: 2.6470588235s;
-}
-.loader .word .letter-10 {
-  animation-delay: 2.9411764706s;
-}
-.loader .word .letter-11 {
-  animation-delay: 3.2352941176s;
-}
-.loader .word .letter-12 {
-  animation-delay: 3.5294117647s;
-}
-.loader .word .letter-13 {
-  animation-delay: 3.8235294118s;
-}
-.loader .word .letter-14 {
-  animation-delay: 4.1176470588s;
-}
-.loader .word .letter-15 {
-  animation-delay: 4.4117647059s;
-}
-.loader .word .letter-16 {
-  animation-delay: 4.7058823529s;
-}
-.loader .word .letter-17 {
-  animation-delay: 5s;
+  animation: loading 6s linear;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  90% {
-    opacity: 1;
-    transform: translateX(-5px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 @media screen and (max-width: 900px) {
   /*barre de navigation*/
   .navbar {
@@ -597,6 +549,7 @@ form {
   }
   .navbar .logo {
     width: 40%;
+    padding: 0.5em;
   }
 }
 .cardsContainer {
@@ -671,10 +624,10 @@ form {
   padding: 0.5rem;
 }
 .skills-slider .control.prev {
-  left: 50px;
+  left: 66px;
 }
 .skills-slider .control.next {
-  right: 50px;
+  right: 66px;
 }
 
 .footer {
@@ -705,7 +658,6 @@ form {
     justify-content: center;
     align-items: center;
     gap: 1em;
-    z-index: 1;
   }
   .mobVbox .mobV button {
     width: 100px;
