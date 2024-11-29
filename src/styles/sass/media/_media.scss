@@ -90,17 +90,13 @@
 
 .footer {
   @include flexCCC;
-  height: 300px;
+  height: 125px;
   margin: 0 -2em -1em -2em;
 
-  .footerLogo {
-    width: 22%;
-  }
-
   .footerCopyRights {
-    width: 160px;
-    font-size: 1.1em;
     text-wrap: wrap;
+    font-size: 1.1em;
+    width: 308px;
   }
 }
 

@@ -17,28 +17,31 @@ function SkillsSlider() {
     };
 
     return (
-        <div className="skills-slider">
-            <button onClick={prevSlide} className="control prev">❮</button>
-            <div className="slides-container">
-                <div
-                    className="slides"
-                    style={{
-                        transform: `translateX(-${(currentIndex / tools.length) * 100}%)`,
-                    }}
-                >
-                    {tools.map((tool, index) => (
-                        <div key={index} className="slide">
-                            <img
-                                src={tool}
-                                alt={`Tool ${index + 1}`}
-                                className="tool-icon"
-                            />
-                        </div>
-                    ))}
+        <section className="skills">
+            <h1>SKILLS</h1>
+            <div className="skills-slider">
+                <button onClick={prevSlide} className="control prev">❮</button>
+                <div className="slides-container">
+                    <div
+                        className="slides"
+                        style={{
+                            transform: `translateX(-${(currentIndex / tools.length) * 100}%)`,
+                        }}>
+                        {tools.map((tool, index) => (
+                            <div key={index} className="slide">
+                                <img
+                                    src={tool}
+                                    alt={`Tool ${index + 1}`}
+                                    className="tool-icon"
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
+                <button onClick={nextSlide} className="control next">❯</button>
             </div>
-            <button onClick={nextSlide} className="control next">❯</button>
-        </div>
+        </section>
+
     );
 }
 

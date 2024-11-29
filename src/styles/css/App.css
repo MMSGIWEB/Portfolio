@@ -357,14 +357,15 @@ form {
           backdrop-filter: blur(20px);
 }
 
-.skills-container {
+.skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.5em;
+  width: 100%;
 }
-.skills-container h1 {
+.skills h1 {
   font-size: 2em;
 }
 
@@ -681,16 +682,13 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 125px;
   margin: 0 -2em -1em -2em;
 }
-.footer .footerLogo {
-  width: 22%;
-}
 .footer .footerCopyRights {
-  width: 160px;
-  font-size: 1.1em;
   text-wrap: wrap;
+  font-size: 1.1em;
+  width: 308px;
 }
 
 @media screen and (max-width: 700px) {
