@@ -52,3 +52,17 @@
         }
     }
 }
+
+.cardsContainer {
+    @include flexCCC;
+    background: #ffffff;
+
+    article,
+    .card {
+        width: 100%;
+
+        .cardImg {
+            height: 60px !important;
+        }
+    }
+}

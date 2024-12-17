@@ -39,9 +39,9 @@ function Navbar() {
                             <NavLink to="/about" className="link aboutLink">
                                 <div className="about">ABOUT</div>
                             </NavLink>
-                            <NavLink to="/Contact" className="link aboutLink">
+                            <a href="#contact_form" className="link aboutLink">
                                 <div className="about">CONTACT</div>
-                            </NavLink>
+                            </a>
                         </div>
                     )}
                 </nav>
@@ -60,9 +60,9 @@ function Navbar() {
                     <NavLink to="/about" className="link aboutLink">
                         <div className="about">ABOUT</div>
                     </NavLink>
-                    <NavLink to="/Contact" className="link aboutLink">
+                    <a href="#contact_form" className="link aboutLink">
                         <div className="about">CONTACT</div>
-                    </NavLink>
+                    </a>
                 </nav>
             )}
         </header>

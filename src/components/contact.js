@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import emailJs from "@emailjs/browser"
 
-function Contact() {
+function ContactForm() {
 
     const {
         register,
@@ -26,7 +26,7 @@ function Contact() {
         )
 
     return (
-        <main className="contact-main">
+        <section id="contact_form">
             <h1>CONTACT ME</h1>
             <p>mariaintweb@gmail.com</p>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -51,9 +51,8 @@ function Contact() {
                 </fieldset>
                 <button type="submit" >ENVOYER</button>
             </form>
-
-        </main>
+        </section>
     )
 }
 
-export default Contact;
+export default ContactForm;

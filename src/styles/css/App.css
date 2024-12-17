@@ -145,24 +145,38 @@ header nav a.active {
   border-radius: 10px;
 }
 
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+.cardsContainer article,
+.cardsContainer .card {
+  width: 100%;
+}
+.cardsContainer article .cardImg,
+.cardsContainer .card .cardImg {
+  height: 60px !important;
+}
+
 .footer {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100px;
   background: #fff;
 }
-.footer .footerLogo {
-  width: 100px;
-}
 .footer .footerCopyRights {
-  font-family: Montserrat;
   font-weight: 500;
-  font-size: 1em;
   text-align: center;
   color: #000;
+  width: 160px;
+  font-size: 1.1em;
+  text-wrap: wrap;
 }
 
 .mydata,
@@ -384,6 +398,68 @@ form {
   font-size: 1.5em;
 }
 
+.slider {
+  display: none !important;
+}
+
+.skills-slider {
+  display: flex !important;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.skills-slider .slides-container {
+  overflow: hidden;
+  width: 80%;
+}
+.skills-slider .slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+  gap: 1em;
+}
+.skills-slider .slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 0.5em;
+}
+.skills-slider .slide .tool-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.skills-slider .slide .tool-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.skills-slider .control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.skills-slider .control.prev {
+  left: 50px;
+}
+.skills-slider .control.next {
+  right: 50px;
+}
+
 .infoBanner {
   display: flex;
   flex-direction: column;
@@ -589,7 +665,7 @@ form {
     transform: translateX(0);
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   /*barre de navigation*/
   .navbar {
     gap: 3em;
@@ -598,101 +674,6 @@ form {
     width: 40%;
   }
 }
-.cardsContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #ffffff;
-}
-.cardsContainer article,
-.cardsContainer .card {
-  width: 100%;
-}
-.cardsContainer article .cardImg,
-.cardsContainer .card .cardImg {
-  height: 60px !important;
-}
-
-.slider {
-  display: none !important;
-}
-
-.skills-slider {
-  display: flex !important;
-  justify-content: center;
-  position: relative;
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
-.skills-slider .slides-container {
-  overflow: hidden;
-  width: 80%;
-}
-.skills-slider .slides {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s ease-in-out;
-  gap: 1em;
-}
-.skills-slider .slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 0.5em;
-}
-.skills-slider .slide .tool-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-.skills-slider .slide .tool-name {
-  font-size: 1rem;
-  font-weight: bold;
-}
-.skills-slider .control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-.skills-slider .control.prev {
-  left: 50px;
-}
-.skills-slider .control.next {
-  right: 50px;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 210px;
-  margin: 0 -2em -1em -2em;
-}
-.footer .footerLogo {
-  width: 22%;
-}
-.footer .footerCopyRights {
-  width: 160px;
-  font-size: 1.1em;
-  text-wrap: wrap;
-}
-
 @media screen and (max-width: 700px) {
   .mobVbox {
     flex-direction: row;

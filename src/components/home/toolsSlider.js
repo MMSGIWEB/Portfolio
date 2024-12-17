@@ -17,7 +17,7 @@ function SkillsSlider() {
     };
 
     return (
-        <div className="skills-slider">
+        <section className="skills-slider" id="skills">
             <button onClick={prevSlide} className="control prev">❮</button>
             <div className="slides-container">
                 <div
@@ -38,7 +38,7 @@ function SkillsSlider() {
                 </div>
             </div>
             <button onClick={nextSlide} className="control next">❯</button>
-        </div>
+        </section>
     );
 }
 

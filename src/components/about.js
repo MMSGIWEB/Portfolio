@@ -8,7 +8,7 @@ import linkedIn from '../assets/images/icons/in.svg'
 import location from '../assets/images/icons/location.svg'
 import user from '../assets/images/icons/user.svg'
 
-function About() {
+function AboutMe() {
     const { id } = useParams()
     const content = about.find((text) => text.id === id)
 
@@ -90,4 +90,4 @@ function About() {
     )
 }
 
-export default About;
+export default AboutMe;

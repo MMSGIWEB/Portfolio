@@ -19,3 +19,64 @@
         font-size: 1.5em;
     }
 }
+
+.slider {
+    display: none !important;
+}
+
+.skills-slider {
+    display: flex !important;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+
+    .slides-container {
+        overflow: hidden;
+        width: 80%;
+    }
+
+    .slides {
+        @include flexcc;
+        transition: transform 0.5s ease-in-out;
+        gap: 1em;
+    }
+
+    .slide {
+        @include flexCCC;
+        text-align: center;
+        @include glassEffect;
+
+        .tool-icon {
+            width: 50px; // Taille des icônes
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .tool-name {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+
+    .control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+
+        &.prev {
+            left: 50px;
+        }
+
+        &.next {
+            right: 50px;
+        }
+    }
+}
