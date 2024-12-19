@@ -89,7 +89,7 @@ header nav a.active {
 }
 
 .projects-section h1,
-.cardsContainer {
+.card {
   background: transparent;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -139,26 +139,11 @@ header nav a.active {
   align-items: center;
 }
 .projects-section .cardsContainer article .cardLink .card .cardImg {
-  height: 80px;
+  height: 72px;
   -o-object-fit: fill;
      object-fit: fill;
   border-radius: 10px;
-}
-
-.cardsContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #ffffff;
-}
-.cardsContainer article,
-.cardsContainer .card {
-  width: 100%;
-}
-.cardsContainer article .cardImg,
-.cardsContainer .card .cardImg {
-  height: 60px !important;
+  width: 180px;
 }
 
 .footer {
@@ -454,10 +439,10 @@ form {
   padding: 0.5rem;
 }
 .skills-slider .control.prev {
-  left: 50px;
+  left: 10px;
 }
 .skills-slider .control.next {
-  right: 50px;
+  right: 10px;
 }
 
 .infoBanner {
@@ -704,5 +689,8 @@ form {
     justify-content: center;
     align-items: center;
     gap: 1em;
+  }
+  .skills-slider .slides-container {
+    width: 50%;
   }
 }/*# sourceMappingURL=App.css.map */
