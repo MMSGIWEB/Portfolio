@@ -1,6 +1,13 @@
 * {
   text-decoration: none;
-  color: #fff;
+}
+
+a {
+  cursor: pointer;
+}
+
+html {
+  width: 100%;
 }
 
 #root {
@@ -50,8 +57,6 @@ header {
 }
 header .logo {
   width: 15%;
-  position: relative;
-  top: 1em;
 }
 header nav {
   display: flex;
@@ -70,22 +75,23 @@ header nav .link {
 }
 header nav .link:active {
   text-decoration: underline;
-  color: #fff;
+  color: #000;
 }
 header nav .link:hover {
   text-decoration: underline;
-  color: #fff;
+  color: #000;
+  color: #000;
 }
 header nav .link div {
-  color: #fff;
-  font-family: "DM Serif Display", serif !important;
+  color: #000;
+  font-family: "Roboto", sans-serif !important;
   font-weight: 500;
   text-wrap: nowrap;
   font-size: 2em;
 }
 header nav a.active {
   text-decoration: underline;
-  color: #fff;
+  color: #000;
 }
 
 .projects-section h1,
@@ -104,6 +110,7 @@ header nav a.active {
   align-items: center;
 }
 .projects-section h1 {
+  margin-top: 0;
   font-size: 2em;
 }
 .projects-section .cardsContainer {
@@ -139,7 +146,7 @@ header nav a.active {
   align-items: center;
 }
 .projects-section .cardsContainer article .cardLink .card .cardImg {
-  height: 72px;
+  height: 62px;
   -o-object-fit: fill;
      object-fit: fill;
   border-radius: 10px;
@@ -165,9 +172,7 @@ header nav a.active {
 }
 
 .mydata,
-.about-content,
-.list,
-.list li {
+.about-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,31 +226,6 @@ header nav a.active {
 .about-main .about-container .mydata {
   width: 100%;
 }
-.about-main .about-container .mydata ul {
-  width: 100%;
-  gap: 1.5em;
-}
-.about-main .about-container .mydata ul li {
-  align-items: center;
-  font-size: 1.2em;
-  gap: 0.6em;
-  height: 44px;
-  text-overflow: ellipsis;
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 0.5em;
-}
-.about-main .about-container .mydata ul li a {
-  color: #fff;
-  display: flex;
-  gap: 0.6em;
-}
-.about-main .about-container .mydata ul li img {
-  width: 30px;
-  color: #fff;
-}
 
 fieldset,
 form {
@@ -253,50 +233,79 @@ form {
   flex-direction: column;
 }
 
-.contact-main h1,
-.contact-main p,
-.contact-main form {
+#contact_form h2,
+#contact_form p,
+#contact_form form,
+.formInfo h3 {
   background: transparent;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border-radius: 15px;
-  padding: 0.5em;
   padding: 0.5em;
 }
 
-.contact-main {
+#contact_form,
+.formInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact_form {
   gap: 1em;
 }
-.contact-main p {
-  font-size: 1.5em;
+#contact_form h2 {
+  width: 165px;
 }
-.contact-main form {
+#contact_form article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#contact_form article .formInfo,
+#contact_form article form {
+  width: 45%;
+}
+#contact_form article .formInfo {
+  height: 100%;
+  align-self: start;
+}
+#contact_form article .formInfo p {
+  font-size: 1.5em;
+  width: 245px;
+}
+#contact_form article .formInfo h3 {
+  font-size: 2em;
+  text-align: center;
+}
+#contact_form article form {
   background: transparent;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 0.5em;
 }
-.contact-main form fieldset {
+#contact_form article form fieldset {
   border: none;
   gap: 0.5em;
 }
-.contact-main form fieldset label {
-  justify-self: start;
+#contact_form article form fieldset label {
   font-size: 1.2em;
 }
-.contact-main form fieldset input {
+#contact_form article form fieldset input {
   height: 30px;
-  width: 400px;
+  width: 100%;
   border-radius: 10px;
 }
-.contact-main form fieldset .text {
+#contact_form article form fieldset .text {
   height: 150px;
+  width: 100%;
   border-radius: 10px;
   font-size: 1.5em;
   overflow: scroll;
 }
-.contact-main form button {
+#contact_form article form button {
   height: 40px;
   width: 130px;
   font-size: 1.2em;
@@ -371,6 +380,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 203px;
   margin-top: 2em;
 }
 .top .intro {
@@ -381,6 +391,8 @@ form {
   border-radius: 15px;
   padding: 0.5em;
   font-size: 1.5em;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .slider {
@@ -494,7 +506,43 @@ form {
   font-size: 1.5em;
   position: absolute;
   bottom: -40px;
-  font-family: "Montserrat";
+  font-family: "Roboto", sans-serif;
+}
+
+.networkList,
+.networkList li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.networkList li,
+.networkList a {
+  gap: 1em;
+}
+
+.networkList {
+  gap: 1.5em;
+  padding-inline-end: 40px;
+  flex-wrap: wrap;
+}
+.networkList li {
+  height: 38px;
+  text-overflow: ellipsis;
+  background: transparent;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 0.5em;
+}
+.networkList li a {
+  color: #fff;
+  display: flex;
+  gap: 0.6em;
+}
+.networkList li img {
+  width: 30px;
+  color: #fff;
 }
 
 @keyframes slideOut {
@@ -650,7 +698,56 @@ form {
     transform: translateX(0);
   }
 }
-@media screen and (max-width: 950px) {
+@keyframes slideOut {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes waiting {
+  0% {
+    color: #592B25;
+    text-shadow: 0 0 7px #592B25;
+  }
+  90% {
+    color: whitesmoke;
+    text-shadow: none;
+  }
+  100% {
+    color: #592B25;
+    text-shadow: 0 0 7px #592B25;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  90% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  body {
+    min-width: 380px;
+  }
+  .index {
+    z-index: 0;
+  }
   /*barre de navigation*/
   .navbar {
     gap: 3em;
@@ -658,26 +755,38 @@ form {
   .navbar .logo {
     width: 40%;
   }
-}
-@media screen and (max-width: 700px) {
+  /*menu responsive*/
   .mobVbox {
     flex-direction: row;
-    align-items: start;
+    align-items: center;
     justify-content: space-between;
     max-height: 160px;
+    padding: 1em 0;
   }
-  .mobVbox .mobV {
-    border-radius: 10px !important;
+  .mobVbox .logo {
+    padding-left: 1.5em;
+  }
+  .mobVbox .logo img {
+    height: 70px;
+  }
+  .mobVbox .mobV,
+  .mobVbox .logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 250px;
+  }
+  .mobVbox .mobV {
+    border-radius: 10px !important;
     gap: 1em;
+    margin-right: 1.5em;
+    background: rgb(240, 240, 240);
     z-index: 1;
   }
   .mobVbox .mobV button {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 70px;
   }
   .mobVbox .mobV button .fa-bars {
     font-size: 5em;
@@ -690,6 +799,32 @@ form {
     align-items: center;
     gap: 1em;
   }
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: 180px 180px;
+    grid-template-rows: 120px 120px 120px 120px 120px;
+    gap: 1em;
+    justify-content: center;
+  }
+  .cardsContainer article {
+    width: 100% !important;
+  }
+  #contact_form article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #contact_form article .formInfo,
+  #contact_form article form {
+    min-width: 315px;
+    width: 80%;
+  }
+  #contact_form article .formInfo {
+    align-self: center !important;
+  }
+}
+@media screen and (max-width: 700px) {
   .skills-slider .slides-container {
     width: 50%;
   }

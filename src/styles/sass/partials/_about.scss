@@ -1,9 +1,7 @@
 @import "../details/mixin";
 
 .mydata,
-.about-content,
-.list,
-.list li {
+.about-content {
     @include flexcc
 }
 
@@ -56,32 +54,6 @@
 
         .mydata {
             width: 100%;
-
-            ul {
-                width: 100%;
-                gap: 1.5em;
-
-                li {
-                    align-items: center;
-                    font-size: 1.2em;
-                    gap: .6em;
-                    height: 44px;
-                    text-overflow: ellipsis;
-                    @include glassEffect;
-
-
-                    a {
-                        color: #fff;
-                        display: flex;
-                        gap: 0.6em;
-                    }
-
-                    img {
-                        width: 30px;
-                        color: #fff;
-                    }
-                }
-            }
         }
     }
 

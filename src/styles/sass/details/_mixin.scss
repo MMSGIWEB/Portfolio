@@ -35,6 +35,12 @@
     justify-content: space-between;
 }
 
+@mixin flexRowSA {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 @mixin flexSB {
     display: flex;
     justify-content: space-between;
@@ -53,7 +59,7 @@
 //details
 @mixin blackUnderline {
     text-decoration: underline;
-    color: #fff;
+    color: #000;
 }
 
 //glassMorphism

@@ -11,12 +11,15 @@
 
 .top {
     @include flexcc;
+    min-width: 203px;
     margin-top: 2em;
 
     .intro {
         width: 80%;
         @include glassEffect;
         font-size: 1.5em;
+        margin-bottom: 0;
+        text-align: center;
     }
 }
 

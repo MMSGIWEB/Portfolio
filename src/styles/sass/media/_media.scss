@@ -1,6 +1,14 @@
 @import "../details/mixin";
+@import '../keyframes/keyframes';
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 900px) {
+  body {
+    min-width: 380px;
+  }
+
+  .index {
+    z-index: 0;
+  }
 
   /*barre de navigation*/
   .navbar {
@@ -10,25 +18,41 @@
       width: 40%;
     }
   }
-}
 
-
-@media screen and (max-width: 700px) {
+  /*menu responsive*/
   .mobVbox {
     flex-direction: row;
-    align-items: start;
+    align-items: center;
     justify-content: space-between;
     max-height: 160px;
+    padding: 1em 0;
+
+    .logo {
+      padding-left: 1.5em;
+
+      img {
+        height: 70px;
+      }
+    }
+
+    .mobV,
+    .logo {
+      @include flexCCC;
+      max-width: 250px;
+      // transition: translateX();
+      // animation: slideOut 0.5s ease-in-out;
+    }
 
     .mobV {
       border-radius: 10px !important;
-      @include flexCCC;
       gap: 1em;
+      margin-right: 1.5em;
+      background: rgb(240, 240, 240);
       z-index: 1;
 
       button {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 70px;
 
         .fa-bars {
           font-size: 5em;
@@ -43,7 +67,40 @@
     }
   }
 
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: 180px 180px;
+    grid-template-rows: 120px 120px 120px 120px 120px;
+    gap: 1em;
+    justify-content: center;
+
+    article {
+      width: 100% !important;
+    }
+  }
+
+  #contact_form article {
+    @include flexCCC;
+
+    .formInfo,
+    form {
+      min-width: 315px;
+      width: 80%;
+    }
+
+    .formInfo {
+      align-self: center !important;
+    }
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+
   .skills-slider .slides-container {
     width: 50%;
   }
+
 }
+
+@media screen and (max-width: 620px) {}

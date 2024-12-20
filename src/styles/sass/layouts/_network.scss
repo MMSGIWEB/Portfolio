@@ -1,0 +1,36 @@
+@import '../details/mixin';
+
+.networkList,
+.networkList li {
+    @include flexcc;
+}
+
+.networkList li,
+.networkList a {
+    gap: 1em;
+}
+
+.networkList {
+    gap: 1.5em;
+    padding-inline-end: 40px;
+    flex-wrap: wrap;
+
+    li {
+        // font-size: 1.2em;
+        height: 38px;
+        text-overflow: ellipsis;
+        @include glassEffect;
+
+
+        a {
+            color: #fff;
+            display: flex;
+            gap: 0.6em;
+        }
+
+        img {
+            width: 30px;
+            color: #fff;
+        }
+    }
+}

@@ -33,7 +33,6 @@
     100% {
         color: #592B25;
         text-shadow: 0 0 7px #592B25;
-
     }
 }
 
@@ -52,3 +51,13 @@
         opacity: 0;
     }
 }
+
+// @keyframes slideOut {
+//     0% {
+//         transform: translateX(-100%);
+//     }
+
+//     100% {
+//         transform: translateX(0%);
+//     }
+// }

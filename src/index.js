@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import AboutMe from './components/about';
+import AboutMe from './components/about/about';
 
 // Configuration du routeur avec le flag "v7_fetcherPersist"
 const router = createBrowserRouter(

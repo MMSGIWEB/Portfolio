@@ -3,7 +3,8 @@ import Footer from "../components/footer/Footer";
 import Card from "../components/home/Card";
 import SkillsSlider from "../components/home/toolsSlider";
 import homeData from "../datas/homeData";
-import ContactForm from "../components/contact";
+import ContactForm from "../components/home/contact";
+import NetworkLinks from "../components/networks/networks";
 
 function Home() {
 
@@ -17,6 +18,7 @@ function Home() {
                 <Card />
                 <SkillsSlider />
                 <ContactForm />
+                <NetworkLinks />
             </main>
             <Footer />
         </>

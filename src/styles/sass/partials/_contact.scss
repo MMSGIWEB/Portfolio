@@ -6,54 +6,83 @@ form {
 
 }
 
-.contact-main h1,
-.contact-main p,
-.contact-main form {
+#contact_form h2,
+#contact_form p,
+#contact_form form,
+.formInfo h3 {
     @include glassEffect;
-    padding: .5em;
 }
 
-.contact-main {
+#contact_form,
+.formInfo {
+    @include flexCCC;
+}
+
+#contact_form {
     gap: 1em;
 
-    p {
-        font-size: 1.5em;
+    h2 {
+        width: 165px;
     }
 
-    form {
-        @include glassEffect;
+    article {
+        @include flexRowSA;
 
-        fieldset {
-            border: none;
-            gap: .5em;
+        .formInfo,
+        form {
+            width: 45%;
+        }
 
-            label {
-                justify-self: start;
-                font-size: 1.2em;
-            }
+        .formInfo {
+            height: 100%;
+            align-self: start;
 
-            input {
-                height: 30px;
-                width: 400px;
-                border-radius: 10px;
-            }
-
-            .text {
-                height: 150px;
-                border-radius: 10px;
+            p {
                 font-size: 1.5em;
-                overflow: scroll;
+                width: 245px;
+            }
+
+            h3 {
+                font-size: 2em;
+                text-align: center;
             }
         }
 
-        button {
-            height: 40px;
-            width: 130px;
-            font-size: 1.2em;
-            border-radius: 10px;
-            background: #c36d7d;
-            justify-self: center;
-            margin: 1em .8em;
+        form {
+            @include glassEffect;
+
+            fieldset {
+                border: none;
+                gap: .5em;
+
+                label {
+                    font-size: 1.2em;
+                }
+
+                input {
+                    height: 30px;
+                    width: 100%;
+                    border-radius: 10px;
+                }
+
+                .text {
+                    height: 150px;
+                    width: 100%;
+                    border-radius: 10px;
+                    font-size: 1.5em;
+                    overflow: scroll;
+                }
+            }
+
+            button {
+                height: 40px;
+                width: 130px;
+                font-size: 1.2em;
+                border-radius: 10px;
+                background: #c36d7d;
+                justify-self: center;
+                margin: 1em .8em;
+            }
         }
     }
 }

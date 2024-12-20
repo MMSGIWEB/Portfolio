@@ -2,7 +2,15 @@
 
 * {
     text-decoration: none;
-    color: #fff;
+    // color: #fff;
+}
+
+a {
+    cursor: pointer;
+}
+
+html {
+    width: 100%;
 }
 
 #root {
@@ -49,5 +57,6 @@ main {
 @import '../layouts/project';
 @import '../partials/home';
 @import '../layouts/slider';
+@import '../layouts/network';
 @import '../partials/loader';
 @import '../media/media';

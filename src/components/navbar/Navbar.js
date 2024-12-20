@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 function Navbar() {
-    const isSmallScreen = useMediaQuery({ query: "(max-width: 700px)" });
+    const isSmallScreen = useMediaQuery({ query: "(max-width: 900px)" });
     const [nav, setNav] = useState(false);
 
     const hambMenu = () => {
@@ -22,7 +22,11 @@ function Navbar() {
                 // Menu Burger (mobile)
                 <nav className="mobV">
                     <button onClick={hambMenu} className="hamburger-icon">
-                        <i className="fa-solid fa-bars"></i>
+                        {/* {nav ? ( */}
+                            <i className="fa-solid fa-bars"></i>
+                        {/* // ) : (
+                        //     <i className="fa-solid fa-xmark"></i>
+                        // )} */}
                     </button>
                     {/* Menu déroulant pour mobile */}
                     {nav && (
