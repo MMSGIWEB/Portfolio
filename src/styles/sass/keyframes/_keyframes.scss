@@ -39,12 +39,12 @@
 @keyframes loading {
     0% {
         opacity: 1;
-        z-index: 1;
+        z-index: 2;
     }
 
     90% {
         opacity: 1;
-        z-index: 1;
+        z-index: 2;
     }
 
     100% {
@@ -52,12 +52,20 @@
     }
 }
 
-// @keyframes slideOut {
-//     0% {
-//         transform: translateX(-100%);
-//     }
+@keyframes slideOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+        // height: 0%;
+    }
 
-//     100% {
-//         transform: translateX(0%);
-//     }
-// }
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+        // height: 265px;
+    }
+}

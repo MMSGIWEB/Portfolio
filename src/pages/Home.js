@@ -5,8 +5,13 @@ import SkillsSlider from "../components/home/toolsSlider";
 import homeData from "../datas/homeData";
 import ContactForm from "../components/home/contact";
 import NetworkLinks from "../components/networks/networks";
+import { useRef } from "react";
 
 function Home() {
+    // réf pour les sections
+    const projectsRef = useRef(null)
+    const skillsRef = useRef(null)
+    const contactRef = useRef(null)
 
     return (
         <>
@@ -25,5 +30,4 @@ function Home() {
     )
 }
 
-//peut ê importé et utilisé dans d'autres fichiers de l'appli
 export default Home;

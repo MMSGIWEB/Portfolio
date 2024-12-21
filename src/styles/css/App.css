@@ -578,14 +578,27 @@ form {
 @keyframes loading {
   0% {
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
   }
   90% {
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes slideOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
 .loader {
@@ -731,14 +744,27 @@ form {
 @keyframes loading {
   0% {
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
   }
   90% {
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes slideOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
 @media screen and (max-width: 900px) {
@@ -783,10 +809,18 @@ form {
     margin-right: 1.5em;
     background: rgb(240, 240, 240);
     z-index: 1;
+    position: fixed;
+    top: 15px;
+    right: 0;
+    transition: all 2s;
+    animation-delay: 1s;
   }
   .mobVbox .mobV button {
     width: 80px;
     height: 70px;
+  }
+  .mobVbox .mobV button:active .mobV .link div {
+    padding: 2em;
   }
   .mobVbox .mobV button .fa-bars {
     font-size: 5em;
@@ -798,6 +832,12 @@ form {
     justify-content: center;
     align-items: center;
     gap: 1em;
+    transition: all 2s;
+    height: 0%;
+    animation: slideOut 0.5s ease-in-out;
+  }
+  .mobVbox .mobV .mobNav a div {
+    padding: 0;
   }
   .cardsContainer {
     display: grid;
