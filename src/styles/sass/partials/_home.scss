@@ -1,14 +1,5 @@
 @import "../details/mixin";
 
-.skills-container {
-    @include flexCCC;
-    gap: 1.5em;
-
-    h1 {
-        font-size: 2em;
-    }
-}
-
 .top {
     @include flexcc;
     min-width: 203px;
@@ -17,27 +8,25 @@
     .intro {
         width: 80%;
         @include glassEffect;
-        font-size: 1.5em;
+        font-size: 2.5em;
         margin-bottom: 0;
         text-align: center;
     }
 }
 
-.slider {
-    display: none !important;
-}
-
-.skills-slider {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
+.skillsBox {
+    @include flexCCC;
+    gap: 1.5em;
     position: relative;
     width: 80%;
     margin: auto;
     overflow: hidden;
 
+    h1 {
+        font-size: 2em;
+    }
 
-    .slides-container {
+    .tools-container {
         display: grid;
         grid-template-columns: 130px 130px 130px;
         grid-template-rows: 130px 130px 130px;
@@ -48,7 +37,7 @@
         width: 80%;
         height: 70vh;
 
-        .slide {
+        .tool {
             text-align: center;
             @include glassEffect;
 
@@ -64,5 +53,17 @@
             }
         }
     }
+}
 
+.goUpArrow {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    @include glassEffect;
+    z-index: 1;
+
+    i {
+        font-size: 2.5em;
+        padding: .2em .3em;
+    }
 }

@@ -5,7 +5,7 @@ import SkillsSlider from "../components/home/toolsSlider";
 import homeData from "../datas/homeData";
 import ContactForm from "../components/home/contact";
 import NetworkLinks from "../components/networks/networks";
-import { projectsRef } from "../components/refs/refs";
+import { scrollToSection, topRef } from "../refs/refs";
 
 function Home() {
 
@@ -13,13 +13,16 @@ function Home() {
         <>
             <Navbar />
             <main className="index">
-                <section className="top">
+                <section ref={topRef} className="top" id="goUp">
                     <p className="intro">{homeData[0].intro}</p>
                 </section>
                 <Card />
                 <SkillsSlider />
                 <ContactForm />
                 <NetworkLinks />
+                <a onClick={() => scrollToSection(topRef)} className="goUpArrow" >
+                    <i className="fa-solid fa-arrow-up"></i>
+                </a>
             </main>
             <Footer />
         </>

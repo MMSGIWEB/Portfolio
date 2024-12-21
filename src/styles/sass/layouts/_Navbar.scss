@@ -13,6 +13,9 @@ header {
     }
 
     nav {
+        position: fixed;
+        top: 75px;
+        z-index: 1;
         display: flex;
         justify-content: space-between;
         gap: 3.5em;

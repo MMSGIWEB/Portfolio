@@ -1,16 +1,17 @@
 import { useState } from "react";
 import homeData from "../../datas/homeData";
-import { skillsRef } from "../refs/refs";
+import { skillsRef } from "../../refs/refs";
 
 
 function SkillsSlider() {
     const tools = homeData[0]?.tools || [];
 
     return (
-        <section ref={skillsRef} className="skills-slider" id="skills">
-            <div className="slides-container">
+        <section ref={skillsRef} className="skillsBox" id="skills">
+            <h1>SKILLS</h1>
+            <div className="tools-container">
                 {tools.map((tool, index) => (
-                    <div key={index} className="slide">
+                    <div key={index} className="tool">
                         <img
                             src={tool}
                             alt={`Tool ${index + 1}`}
