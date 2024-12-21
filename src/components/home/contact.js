@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import emailJs from "@emailjs/browser"
+import { contactRef } from "../refs/refs";
 
 function ContactForm() {
 
@@ -26,7 +27,7 @@ function ContactForm() {
         )
 
     return (
-        <section id="contact_form">
+        <section ref={contactRef} id="contact_form">
             <h2>CONTACT ME</h2>
             <article className="content">
                 <div className="formInfo">

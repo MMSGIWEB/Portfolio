@@ -54,11 +54,6 @@
       right: 0;
       transition: all 2s;
       animation-delay: 1s;
-      // transform: translateY(0%);
-
-      // &:active {
-      //   transform: translateY(350px);
-      // }
 
       button {
         width: 80px;
@@ -79,7 +74,6 @@
         gap: 1em;
         transition: all 2s;
         height: 0%;
-        // transform: translateY(100%);
         animation: slideOut 0.5s ease-in-out;
 
         a div {
@@ -119,8 +113,9 @@
 
 @media screen and (max-width: 700px) {
 
-  .skills-slider .slides-container {
-    width: 50%;
+  .slides-container {
+    grid-template-columns: 130px 130px !important;
+    grid-template-rows: 130px 130px !important;
   }
 
 }

@@ -1,12 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import projects from "../../datas/projectsData"
+import { projectsRef } from "../refs/refs";
 
 
 function Card() {
 
     return (
-        <section id="projects" className="projects-section">
+        <section ref={projectsRef} id="projects" className="projects-section">
             <h1>PROJECTS</h1>
             <div className="cardsContainer">
                 {projects.map((project) => {

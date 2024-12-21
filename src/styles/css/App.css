@@ -43,6 +43,10 @@ main {
   width: 100%;
 }
 
+section {
+  height: 100vh;
+}
+
 .skills-container {
   width: 100%;
 }
@@ -402,27 +406,24 @@ form {
 .skills-slider {
   display: flex !important;
   justify-content: center;
+  align-items: center;
   position: relative;
   width: 80%;
   margin: auto;
   overflow: hidden;
 }
 .skills-slider .slides-container {
-  overflow: hidden;
-  width: 80%;
-}
-.skills-slider .slides {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s ease-in-out;
+  display: grid;
+  grid-template-columns: 130px 130px 130px;
+  grid-template-rows: 130px 130px 130px;
   gap: 1em;
-}
-.skills-slider .slide {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
+  width: 80%;
+  height: 70vh;
+}
+.skills-slider .slides-container .slide {
   text-align: center;
   background: transparent;
   -webkit-backdrop-filter: blur(10px);
@@ -430,31 +431,14 @@ form {
   border-radius: 15px;
   padding: 0.5em;
 }
-.skills-slider .slide .tool-icon {
+.skills-slider .slides-container .slide .tool-icon {
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
 }
-.skills-slider .slide .tool-name {
+.skills-slider .slides-container .slide .tool-name {
   font-size: 1rem;
   font-weight: bold;
-}
-.skills-slider .control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-.skills-slider .control.prev {
-  left: 10px;
-}
-.skills-slider .control.next {
-  right: 10px;
 }
 
 .infoBanner {
@@ -865,7 +849,8 @@ form {
   }
 }
 @media screen and (max-width: 700px) {
-  .skills-slider .slides-container {
-    width: 50%;
+  .slides-container {
+    grid-template-columns: 130px 130px !important;
+    grid-template-rows: 130px 130px !important;
   }
 }/*# sourceMappingURL=App.css.map */

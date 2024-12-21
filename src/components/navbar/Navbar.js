@@ -2,8 +2,10 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo/logolast.png';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { contactRef, projectsRef, scrollToSection, skillsRef } from '../refs/refs';
 
 function Navbar() {
+
     const isSmallScreen = useMediaQuery({ query: '(max-width: 900px)' });
     const [nav, setNav] = useState(false);
 
@@ -32,16 +34,18 @@ function Navbar() {
                                 <NavLink to='/Portfolio' className='link navTitle indexLink'>
                                     <div className='index'>HOME</div>
                                 </NavLink>
-                                <a href='#projects' className='link navTitle aboutLink'>
+
+                                <a href='#projects' Onclick={() => scrollToSection(projectsRef)} className='link navTitle aboutLink'>
                                     <div className='about'>PROJECTS</div>
                                 </a>
-                                <a href='#skills' className='link navTitle aboutLink'>
+                                <a href='#skills' Onclick={() => scrollToSection(skillsRef)} className='link navTitle aboutLink'>
                                     <div className='about'>SKILLS</div>
                                 </a>
                                 <NavLink to='/about' className='link navTitle aboutLink'>
                                     <div className='about'>ABOUT</div>
                                 </NavLink>
-                                <a href='#contact_form' className='link navTitle aboutLink'>
+                                <a href='#contact_form' Onclick={() => scrollToSection(contactRef)}
+                                    className='link navTitle aboutLink'>
                                     <div className='about'>CONTACT</div>
                                 </a>
                             </div>
@@ -53,16 +57,16 @@ function Navbar() {
                         <NavLink to='/Portfolio' className='link indexLink'>
                             <div className='index'>HOME</div>
                         </NavLink>
-                        <a href='#projects' className='link aboutLink'>
+                        <a href='#projects' Onclick={() => scrollToSection(projectsRef)} className='link aboutLink'>
                             <div className='about'>PROJECTS</div>
                         </a>
-                        <a href='#skills' className='link aboutLink'>
+                        <a href='#skills' Onclick={() => scrollToSection(skillsRef)} className='link aboutLink'>
                             <div className='about'>SKILLS</div>
                         </a>
                         <NavLink to='/about' className='link aboutLink'>
                             <div className='about'>ABOUT</div>
                         </NavLink>
-                        <a href='#contact_form' className='link aboutLink'>
+                        <a href='#contact_form' Onclick={() => scrollToSection(contactRef)} className='link aboutLink'>
                             <div className='about'>CONTACT</div>
                         </a>
                     </>
