@@ -283,11 +283,7 @@ form {
 }
 #contact_form article .formInfo {
   height: 100%;
-  align-self: start;
-}
-#contact_form article .formInfo p {
-  font-size: 1.5em;
-  width: 245px;
+  display: flex;
 }
 #contact_form article .formInfo h3 {
   font-size: 2em;
