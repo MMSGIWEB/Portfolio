@@ -34,12 +34,7 @@ form {
 
         .formInfo {
             height: 100%;
-            align-self: start;
-
-            p {
-                font-size: 1.5em;
-                width: 245px;
-            }
+            display: flex;
 
             h3 {
                 font-size: 2em;
