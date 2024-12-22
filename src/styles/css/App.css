@@ -375,6 +375,20 @@ form {
           backdrop-filter: blur(20px);
 }
 
+.msg {
+  position: fixed;
+  bottom: 15px;
+  border: 1px solid red;
+  width: 80%;
+  font-size: 1.5em;
+  font-weight: 500;
+  background: transparent;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 0.5em;
+}
+
 .top {
   display: flex;
   justify-content: center;

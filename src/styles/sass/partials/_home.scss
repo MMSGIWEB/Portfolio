@@ -1,5 +1,16 @@
 @import "../details/mixin";
 
+//msg explicatif
+.msg {
+    position: fixed;
+    bottom: 15px;
+    border: 1px solid red;
+    width: 80%;
+    font-size: 1.5em;
+    font-weight: 500;
+    @include glassEffect;
+}
+
 .top {
     @include flexcc;
     min-width: 203px;
