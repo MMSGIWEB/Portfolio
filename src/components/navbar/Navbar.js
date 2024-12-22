@@ -1,10 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo/logolast.png';
-import { useState } from "react";
-import { useMediaQuery } from "react-responsive";
+import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { contactRef, projectsRef, scrollToSection, skillsRef, topRef } from '../../refs/refs';
 
 function Navbar() {
-    const isSmallScreen = useMediaQuery({ query: "(max-width: 700px)" });
+
+    const isSmallScreen = useMediaQuery({ query: '(max-width: 900px)' });
     const [nav, setNav] = useState(false);
 
     const hambMenu = () => {
@@ -12,59 +14,64 @@ function Navbar() {
     };
 
     return (
-        <header className="navbar mobVbox">
-            <div className="logo">
-                <img src={logo} alt="logo MariaIntWeb" />
+        <header className='navbar mobVbox'>
+            <div className='logo'>
+                <img src={logo} alt='logo MariaIntWeb' />
             </div>
-
             {/* Affichage du menu en fonction de la taille de l'écran */}
-            {isSmallScreen ? (
-                // Menu Burger (mobile)
-                <nav className="mobV">
-                    <button onClick={hambMenu} className="hamburger-icon">
-                        <i className="fa-solid fa-bars"></i>
+            <nav className={isSmallScreen ? 'mobV' : 'navigation'}>
+                {isSmallScreen && (
+                    // Menu Burger (mobile)
+                    <button onClick={hambMenu} className='hamburger-icon'>
+                        <i className='fa-solid fa-bars'></i>
                     </button>
-                    {/* Menu déroulant pour mobile */}
-                    {nav && (
-                        <div className="mobNav">
-                            <NavLink to="/Portfolio" className="link indexLink">
-                                <div className="index">HOME</div>
-                            </NavLink>
-                            <a href="#projects" className="link aboutLink">
-                                <div className="about">PROJECTS</div>
-                            </a>
-                            <a href="#skills" className="link aboutLink">
-                                <div className="about">SKILLS</div>
-                            </a>
-                            <NavLink to="/about" className="link aboutLink">
-                                <div className="about">ABOUT</div>
-                            </NavLink>
-                            <NavLink to="/Contact" className="link aboutLink">
-                                <div className="about">CONTACT</div>
-                            </NavLink>
-                        </div>
-                    )}
-                </nav>
-            ) : (
-                // Menu Desktop
-                <nav className="navigation">
-                    <NavLink to="/Portfolio" className="link indexLink">
-                        <div className="index">HOME</div>
-                    </NavLink>
-                    <a href="#projects" className="link aboutLink">
-                        <div className="about">PROJECTS</div>
-                    </a>
-                    <a href="#skills" className="link aboutLink">
-                        <div className="about">SKILLS</div>
-                    </a>
-                    <NavLink to="/about" className="link aboutLink">
-                        <div className="about">ABOUT</div>
-                    </NavLink>
-                    <NavLink to="/Contact" className="link aboutLink">
-                        <div className="about">CONTACT</div>
-                    </NavLink>
-                </nav>
-            )}
+                )}
+                {/* Menu déroulant pour mobile */}
+                {isSmallScreen ? (
+                    <>
+                        {nav && (
+                            <div className='mobNav'>
+                                <NavLink to='/Portfolio' onClick={() => scrollToSection(topRef)} className='link navTitle indexLink'>
+                                    <div className='index'>HOME</div>
+                                </NavLink>
+
+                                <a href='#projects' onClick={() => scrollToSection(projectsRef)} className='link navTitle aboutLink'>
+                                    <div className='about'>PROJECTS</div>
+                                </a>
+                                <a href='#skills' onClick={() => scrollToSection(skillsRef)} className='link navTitle aboutLink'>
+                                    <div className='about'>SKILLS</div>
+                                </a>
+                                <NavLink to='/about' className='link navTitle aboutLink'>
+                                    <div className='about'>ABOUT</div>
+                                </NavLink>
+                                <a href='#contact_form' onClick={() => scrollToSection(contactRef)}
+                                    className='link navTitle aboutLink'>
+                                    <div className='about'>CONTACT</div>
+                                </a>
+                            </div>
+                        )}
+                    </>
+                ) : (
+                    <>
+                        {/* Menu Desktop */}
+                        <NavLink to='/Portfolio' onClick={() => scrollToSection(topRef)} className='link indexLink'>
+                            <div className='index'>HOME</div>
+                        </NavLink>
+                        <a href='#projects' onClick={() => scrollToSection(projectsRef)} className='link aboutLink'>
+                            <div className='about'>PROJECTS</div>
+                        </a>
+                        <a href='#skills' onClick={() => scrollToSection(skillsRef)} className='link aboutLink'>
+                            <div className='about'>SKILLS</div>
+                        </a>
+                        <NavLink to='/about' className='link aboutLink'>
+                            <div className='about'>ABOUT</div>
+                        </NavLink>
+                        <a href='#contact_form' onClick={() => scrollToSection(contactRef)} className='link aboutLink'>
+                            <div className='about'>CONTACT</div>
+                        </a>
+                    </>
+                )}
+            </nav>
         </header>
     );
 }

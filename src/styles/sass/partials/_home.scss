@@ -1,23 +1,69 @@
 @import "../details/mixin";
 
-.skills {
-    @include flexCCC;
-    gap: 1.5em;
-    width: 100%;
-
-    h1 {
-        font-size: 2em;
-    }
-}
-
 .top {
     @include flexcc;
+    min-width: 203px;
     margin-top: 2em;
 
     .intro {
         width: 80%;
         @include glassEffect;
-        font-size: 1.5em;
+        font-size: 2.5em;
+        margin-bottom: 0;
         text-align: center;
+    }
+}
+
+.skillsBox {
+    @include flexCCC;
+    gap: 1.5em;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .tools-container {
+        display: grid;
+        grid-template-columns: 130px 130px 130px;
+        grid-template-rows: 130px 130px 130px;
+        gap: 1em;
+        justify-content: center;
+        align-items: center;
+        overflow: scroll;
+        width: 80%;
+        height: 70vh;
+
+        .tool {
+            text-align: center;
+            @include glassEffect;
+
+            .tool-icon {
+                width: 70px; // Taille des icônes
+                height: 70px;
+                margin-bottom: 10px;
+            }
+
+            .tool-name {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.goUpArrow {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    @include glassEffect;
+    z-index: 1;
+
+    i {
+        font-size: 2.5em;
+        padding: .2em .3em;
     }
 }

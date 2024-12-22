@@ -1,6 +1,6 @@
-import projects from "../datas/projectsData"
+import projects from "../../datas/projectsData"
 import { useParams } from "react-router-dom";
-import Slideshow from "../components/fiche/Slideshow";
+import Slideshow from "../fiche/Slideshow";
 
 function ProjectInfo() {
     //récup de l'id de la fiche concernée
@@ -15,7 +15,7 @@ function ProjectInfo() {
     })
     return (
         <>
-            <main className="project-content">
+            <div className="project-content">
                 <div className="project-block">
                     <div className="content">
                         <h1>{work?.title}</h1>
@@ -40,7 +40,7 @@ function ProjectInfo() {
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
         </>
     )
 }

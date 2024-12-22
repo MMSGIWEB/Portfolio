@@ -1,6 +1,6 @@
 [
     {
-        "content": "Je m'appelle Maria et j'ai entrepris la formation de développeuse Frontend. Au cours de cette période j'ai exploré les bases du web et ce fut une expérience qui m'a captivé, passionnée et permis d'explorer mes capacités, mes limites et celles je peux dépasser. Elle a eu un réel impact sur moi et ma vision sur le développement. C'est devenu une passion. Par cette formation, j'ai acquis une expérience dans la création d'interfaces utilisateur attrayantes et conviviales. Je suis spécialisée dans les technologies telles que HTML, CSS et JavaScript, et j'ai une expertise dans les frameworks et bibliothèques tels que React. En tant que développeuse front-end, j'ai travaillé sur plusieurs projets où j'ai mené le développement et la mise en œuvre de sites web réactifs et adaptatifs, en veillant à ce qu'ils soient compatibles avec différents navigateurs et appareils. J'ai une bonne compréhension de l'optimisation des performances et de l'accessibilité, en m'assurant que les utilisateurs puissent naviguer facilement sur les sites que je développe. J'aime garder un œil sur les nouvelles technologies, les outils et les approches afin de rester à jour et d'améliorer constamment mes compétences. Je suis à la recherche de nouvelles opportunités qui me permettront de mettre en pratique mes compétences en développement front-end et de contribuer à la création d'interfaces utilisateur intuitives et engageantes. N'hésitez pas à me contacter pour discuter de vos besoins et de la manière dont je peux apporter de la valeur à votre équipe.",
+        "content": "Je m'appelle Maria et j'ai entrepris la formation de développeuse Frontend. Au cours de cette période j'ai exploré les bases du web et ce fut une expérience qui m'a captivé, passionnée et permis d'explorer mes capacités, mes limites et celles je peux dépasser. Par cette formation, j'ai acquis une expérience dans la création d'interfaces utilisateur attrayantes et conviviales. Je suis spécialisée dans les technologies telles que HTML, CSS et JavaScript, et j'ai une expertise dans les frameworks et bibliothèques tels que React. En tant que développeuse front-end, j'ai travaillé sur plusieurs projets où j'ai mené le développement et la mise en œuvre de sites web réactifs et adaptatifs, en veillant à ce qu'ils soient compatibles avec différents navigateurs et appareils. J'ai une bonne compréhension de l'optimisation des performances et de l'accessibilité, en m'assurant que les utilisateurs puissent naviguer facilement sur les sites que je développe. J'aime garder un œil sur les nouvelles technologies, les outils et les approches afin de rester à jour et d'améliorer constamment mes compétences. Je suis à la recherche de nouvelles opportunités qui me permettront de mettre en pratique mes compétences en développement front-end et de contribuer à la création d'interfaces utilisateur intuitives et engageantes. N'hésitez pas à me contacter pour discuter de vos besoins et de la manière dont je peux apporter de la valeur à votre équipe.",
         "courses":[
             {
                 "title": "FORMATION INTÉGRATRICE WEB",
@@ -14,20 +14,15 @@
             }
         ],
         "languages": [
-            "Français (billingue)",
             "Portugais (maternelle)",
-            "Anglais (courant)",
-            "Espagnol (intermédiaire)",
-            "Allemand (intermédiaire)",
-            "Créole [Cap-Vert] (courant)",
-            "Arabe [Litéraire] (débutante)"
+            "Anglais (courant)"
         ],
         "myData": [
             {            
                 "twitter": "https://x.com/mariaintweb",
                 "linkedIn": "https://www.linkedin.com/in/maria-madalena-semedo-gon%C3%A7alves-033334336/",
                 "gitHub": "https://github.com/MMSGIWEB",
-                "name": "Semedo Gonçalves Maria Madalena",
+                "name": "Maria Semedo",
                 "email": "mariaintweb@gmail.com",
                 "location": "93160, Noisy-le-Grand, France"
             }
