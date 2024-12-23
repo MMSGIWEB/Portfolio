@@ -19,6 +19,7 @@ header {
         display: flex;
         justify-content: space-between;
         gap: 3.5em;
+        background: rgb(240, 240, 240) !important;
         @include glassEffect;
 
         .link {
