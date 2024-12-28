@@ -11,19 +11,20 @@ function Slideshow() {
     const getClassName = (i) => {
         if (i === currentPicture) {
             return "currentImg";
+        } else {
             return ""
         }
     }
 
-    //décompte des img sous format "nb/nbTotalimg"
-    const getFormattedImageCount = () => {
-        if (pictures.length > 1) {
-            const totalImageCount = work?.pictures.length;
-            const currentImageCount = currentPicture + 1;
+    // //décompte des img sous format "nb/nbTotalimg"
+    // const getFormattedImageCount = () => {
+    //     if (pictures.length > 1) {
+    //         const totalImageCount = work?.pictures.length;
+    //         const currentImageCount = currentPicture + 1;
 
-            return `${currentImageCount}/${totalImageCount}`
-        }
-    }
+    //         return `${currentImageCount}/${totalImageCount}`
+    //     }
+    // }
 
     //récup des images pour chaque fiche work
     const pictures = work?.pictures.map((picture, i) => {
@@ -32,7 +33,7 @@ function Slideshow() {
                 <img
                     key={i}
                     src={picture}
-                    alt="image du work"
+                    alt="work"
                     className={getClassName(i)}
                 />
             );
@@ -77,7 +78,7 @@ function Slideshow() {
                         <i className="fa-solid fa-chevron-right" onClick={moveToNext}></i>
                     )}
                 </button>
-                <span className="imgCount">{getFormattedImageCount()}</span>
+                {/* <span className="imgCount">{getFormattedImageCount()}</span> */}
             </div>
 
         </>

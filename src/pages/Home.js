@@ -13,7 +13,7 @@ function Home() {
         <>
             <Navbar />
             <main className="index">
-                <div className="msg">Hello! Le site est actuellement en cours de maintenance. Mais vous pouvez néamoins avoir accès à celui-ci, notamment les projets et les infos me concernant ! Merci d'avance pour votre patience et compréhension ! Bonne visite ! </div>
+                <div className="msg">Hello! Le site est actuellement en cours de maintenance. Mais vous pouvez néamoins avoir accès à celui-ci, consulter les projets et les infos me concernant ! Merci d'avance pour votre patience et compréhension ! Bonne visite ! </div>
                 <section ref={topRef} className="top" id="goUp">
                     <p className="intro">{homeData[0].intro}</p>
                 </section>
@@ -21,9 +21,9 @@ function Home() {
                 <SkillsSlider />
                 <ContactForm />
                 <NetworkLinks />
-                <a onClick={() => scrollToSection(topRef)} className="goUpArrow" >
+                <div onClick={() => scrollToSection(topRef)} className="goUpArrow" >
                     <i className="fa-solid fa-arrow-up"></i>
-                </a>
+                </div>
             </main>
             <Footer />
         </>

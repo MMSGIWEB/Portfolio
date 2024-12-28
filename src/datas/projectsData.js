@@ -19,7 +19,7 @@ import { imgP4 } from './imgImport'
 import { imgP6 } from './imgImport'
 import { imgP7 } from './imgImport'
 
-const projects = [
+const projectsData = [
     {
         "id": "11202403",
         "title": "Booki",
@@ -146,4 +146,4 @@ const projects = [
     }
 ]
 
-export default projects;
+export default projectsData;

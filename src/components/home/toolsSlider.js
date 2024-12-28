@@ -1,4 +1,3 @@
-import { useState } from "react";
 import homeData from "../../datas/homeData";
 import { skillsRef } from "../../refs/refs";
 

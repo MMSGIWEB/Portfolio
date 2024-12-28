@@ -1,14 +1,16 @@
 import about from '../../datas/aboutMe.json'
 import { useParams } from "react-router-dom";
 import NetworkLinks from '../networks/networks';
-
+import Navbar from '../navbar/Navbar';
+import Footer from '../footer/Footer';
+;
 function AboutMe() {
     const { id } = useParams()
     const content = about.find((text) => text.id === id)
 
     const course = content?.courses.map((course, i) => {
         return (
-            <section className='block'>
+            <section className='block' key={i}>
                 <div className='title'>{course.title}</div>
                 <div className='date'>{course.date}</div>
                 <div className='location'>{course.location}</div>
@@ -44,7 +46,6 @@ function AboutMe() {
                     <NetworkLinks />
                 </article>
             </section>
-
         </main>
     )
 }

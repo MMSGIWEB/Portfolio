@@ -3,24 +3,31 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AboutMe from './components/about/about';
+import Modal from 'react-modal';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 
-// Configuration du routeur avec le flag "v7_fetcherPersist"
+Modal.setAppElement('#root'); // Définit l'élément racine pour react-modal
+
 const router = createBrowserRouter(
   [
     {
       path: "/Portfolio",
-      element:
-        <App />
+      element: <App />
     },
     {
       path: "/about",
       element:
-        <AboutMe />
+        <>
+          <Navbar />
+          <AboutMe />
+          <Footer />
+        </>
     }
   ],
   {
     future: {
-      v7_fetcherPersist: true, // Active la persistance des fetchers
+      v7_fetcherPersist: true,
     },
   }
 );
@@ -31,8 +38,3 @@ root.render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
