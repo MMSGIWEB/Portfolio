@@ -1,6 +1,6 @@
 import '../src/styles/css/App.css';
 import Loader from './components/loader/loader';
-import Home from './pages/Home';
+import Home from './page/Home';
 
 
 function App() {

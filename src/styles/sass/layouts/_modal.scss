@@ -1,1 +1,5 @@
 @import "../details/mixin";
+
+.ReactModal__Overlay--after-open {
+    z-index: 2;
+}

@@ -52,7 +52,7 @@ h1 {
 }
 
 section {
-  height: 100vh;
+  height: 100vh !important;
 }
 
 .skills-container {
@@ -162,11 +162,11 @@ header nav a.active {
   align-items: center;
 }
 .projects-section .cardsContainer article .cardLink .card .cardImg {
-  height: 62px;
+  height: 60px;
   -o-object-fit: fill;
      object-fit: fill;
   border-radius: 10px;
-  width: 180px;
+  width: 185px;
 }
 
 .footer {
@@ -185,62 +185,6 @@ header nav a.active {
   width: 160px;
   font-size: 1.1em;
   text-wrap: wrap;
-}
-
-.mydata,
-.about-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.languages,
-.about-main, .course-content, .course-content .block, .about-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-content,
-.course-content,
-.languages {
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 0.5em;
-}
-
-.about-main .about-container {
-  gap: 2em;
-  padding-top: 2em;
-}
-.about-main .about-container .about-content {
-  width: 80%;
-  text-align: center;
-}
-.about-main .about-container .about-content p {
-  font-size: 2em;
-}
-.about-main .about-container .course-content {
-  font-size: 1.5em;
-  gap: 1.5em;
-}
-.about-main .about-container .languages {
-  width: 70%;
-}
-.about-main .about-container .languages .list {
-  font-size: 1.5em;
-}
-.about-main .about-container .list {
-  list-style: none;
-  gap: 1.5em;
-  flex-wrap: wrap;
-  font-size: 1.2em;
-}
-.about-main .about-container .mydata {
-  width: 100%;
 }
 
 fieldset,
@@ -324,6 +268,10 @@ form {
   background: #c36d7d;
   justify-self: center;
   margin: 1em 0.8em;
+}
+
+.ReactModal__Overlay--after-open {
+  z-index: 2;
 }
 
 .msg {

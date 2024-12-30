@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo/logolast.png';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { contactRef, projectsRef, scrollToSection, skillsRef, topRef } from '../../refs/refs';
+import { contactRef, projectsRef, scrollToSection, skillsRef, topRef, aboutMeRef } from '../../refs/refs';
 
 function Navbar() {
 
@@ -41,9 +41,9 @@ function Navbar() {
                                 <a href='#skills' onClick={() => scrollToSection(skillsRef)} className='link navTitle aboutLink'>
                                     <div className='about'>SKILLS</div>
                                 </a>
-                                <NavLink to='/about' className='link navTitle aboutLink'>
+                                <a to='/about' onClick={() => scrollToSection(aboutMeRef)} className='link navTitle aboutLink'>
                                     <div className='about'>ABOUT</div>
-                                </NavLink>
+                                </a>
                                 <a href='#contact_form' onClick={() => scrollToSection(contactRef)}
                                     className='link navTitle aboutLink'>
                                     <div className='about'>CONTACT</div>
@@ -63,9 +63,9 @@ function Navbar() {
                         <a href='#skills' onClick={() => scrollToSection(skillsRef)} className='link aboutLink'>
                             <div className='about'>SKILLS</div>
                         </a>
-                        <NavLink to='/about' className='link aboutLink'>
+                        <a onClick={() => scrollToSection(aboutMeRef)} className='link aboutLink'>
                             <div className='about'>ABOUT</div>
-                        </NavLink>
+                        </a>
                         <a href='#contact_form' onClick={() => scrollToSection(contactRef)} className='link aboutLink'>
                             <div className='about'>CONTACT</div>
                         </a>

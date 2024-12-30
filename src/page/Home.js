@@ -6,6 +6,7 @@ import homeData from "../datas/homeData";
 import ContactForm from "../components/home/contact";
 import NetworkLinks from "../components/networks/networks";
 import { scrollToSection, topRef } from "../refs/refs";
+import AboutMe from "../components/about/about";
 
 function Home() {
 
@@ -19,6 +20,7 @@ function Home() {
                 </section>
                 <Card />
                 <SkillsSlider />
+                <AboutMe />
                 <ContactForm />
                 <NetworkLinks />
                 <div onClick={() => scrollToSection(topRef)} className="goUpArrow" >

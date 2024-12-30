@@ -1,52 +1,49 @@
 import about from '../../datas/aboutMe.json'
-import { useParams } from "react-router-dom";
 import NetworkLinks from '../networks/networks';
-import Navbar from '../navbar/Navbar';
-import Footer from '../footer/Footer';
-;
-function AboutMe() {
-    const { id } = useParams()
-    const content = about.find((text) => text.id === id)
+import { aboutMeRef } from '../../refs/refs';
 
-    const course = content?.courses.map((course, i) => {
+function AboutMe() {
+
+    const course = about[0].courses?.map((course, i) => {
         return (
-            <section className='block' key={i}>
+            <article className='block' key={i}>
                 <div className='title'>{course.title}</div>
                 <div className='date'>{course.date}</div>
                 <div className='location'>{course.location}</div>
-            </section>
+            </article>
         )
     })
 
-    const languages = content?.languages?.map((language) => {
+    const languages = about[0].languages?.map((language, i) => {
         return (
-            <li>{language}</li>
+            <li key={i} >{language}</li>
         )
     })
 
     return (
-        <main className="about-main">
-            <section className='about-container'>
-                <article className="about-content">
-                    <p className="text">
-                        {content?.content}
-                    </p>
-                </article>
-                <article className='course-content'>
-                    <h1>DIPLÔMES / FORMATIONS</h1>
-                    {course}
-                </article>
-                <article className='languages'>
-                    <h2>LANGUES</h2>
-                    <ul className='list langs'>
-                        {languages}
-                    </ul>
-                </article>
-                <article className='mydata'>
-                    <NetworkLinks />
-                </article>
-            </section>
-        </main>
+        <section ref={aboutMeRef} className='about-container'>
+            <article className="about-content">
+                {about[0].intro?.map((paragraph, i) => {
+                    return (
+                        <p key={i} className="text">{paragraph}</p>
+                    )
+                })}
+
+            </article>
+            <article className='course-content'>
+                <h1>DIPLÔMES / FORMATIONS</h1>
+                {course}
+            </article>
+            <article className='languages'>
+                <h2>LANGUES</h2>
+                <ul className='list langs'>
+                    {languages}
+                </ul>
+            </article>
+            <article className='mydata'>
+                <NetworkLinks />
+            </article>
+        </section>
     )
 }
 
