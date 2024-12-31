@@ -16,16 +16,6 @@ function Slideshow() {
         }
     }
 
-    // //décompte des img sous format "nb/nbTotalimg"
-    // const getFormattedImageCount = () => {
-    //     if (pictures.length > 1) {
-    //         const totalImageCount = work?.pictures.length;
-    //         const currentImageCount = currentPicture + 1;
-
-    //         return `${currentImageCount}/${totalImageCount}`
-    //     }
-    // }
-
     //récup des images pour chaque fiche work
     const pictures = work?.pictures.map((picture, i) => {
         if (work.pictures.length > 0) {
@@ -40,6 +30,16 @@ function Slideshow() {
         }
         return null; // Si la condition n'est pas remplie, rien ne sera rendu
     });
+
+    //décompte des img sous format "nb/nbTotalimg"
+    const getFormattedImageCount = () => {
+        if (pictures.length > 1) {
+            const totalImageCount = work?.pictures.length;
+            const currentImageCount = currentPicture + 1;
+
+            return `${currentImageCount}/${totalImageCount}`
+        }
+    }
 
     const moveToNext = () => {
         //currentState va changer de 1 à 1, sans dépasser la longueur du nb d'img
@@ -67,7 +67,6 @@ function Slideshow() {
         <>
             <div className="infoBanner">
                 {pictures}
-                {/* expression conditionnelle : si le nombre d'img est supérieur à 1 alors on intègre les flèches */}
                 <button className="arrowLeft arrow">
                     {pictures.length > 1 && (
                         <i className="fa-solid fa-chevron-left" onClick={moveToPrevious}></i>
@@ -78,7 +77,7 @@ function Slideshow() {
                         <i className="fa-solid fa-chevron-right" onClick={moveToNext}></i>
                     )}
                 </button>
-                {/* <span className="imgCount">{getFormattedImageCount()}</span> */}
+                <span className="imgCount">{getFormattedImageCount()}</span>
             </div>
 
         </>

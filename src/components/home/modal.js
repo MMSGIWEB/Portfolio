@@ -4,11 +4,6 @@ import Modal from 'react-modal';
 import { useEffect, useState } from "react";
 
 function ProjectModal({ isOpen, closeModal, projectId }) {
-    // //récup de l'id de la fiche concernée
-    // const { id } = useParams()
-    // //fait correspondre l'id à avec un projet
-    // const project = projectsData.find((work) => work.id === id)
-
     const [project, setProject] = useState(null);
 
     // Utilisation de l'ID du projet pour récupérer les données du projet
@@ -36,8 +31,6 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
         )
     })
 
-    console.log("valeur de gitHub:", project?.github)
-
     return (
         <div className="pBlock">
             <Modal className="pModal" isOpen={isOpen} onRequestClose={closeModal} contentLabel="Modale du projet">
@@ -45,7 +38,7 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
                 <h1>{project?.title}</h1>
                 <div className="info">
                     <p>{project?.content}</p>
-                    {/* <Slideshow /> */}
+                    <Slideshow />
                     <div className="tools" >
                         {tools}
                     </div>
