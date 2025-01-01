@@ -1,87 +1,58 @@
 import React, { useState } from "react";
-import projectsData from "../../datas/projectsData"
-import { useParams } from "react-router-dom";
 
-function Slideshow() {
-    const { id } = useParams()
-    const work = projectsData.find((project) => project.id === id)
-    const [currentPicture, setCurrentPicture] = useState(0)
+function Slideshow({ pictures }) {
+    const [currentPicture, setCurrentPicture] = useState(0);
 
-    //fonction qui donne une classe à l'image affichée
-    const getClassName = (i) => {
-        if (i === currentPicture) {
-            return "currentImg";
-        } else {
-            return ""
-        }
+    if (!pictures || pictures.length === 0) {
+        return <p>Aucune image à afficher pour ce projet.</p>;
     }
 
-    //récup des images pour chaque fiche work
-    const pictures = work?.pictures.map((picture, i) => {
-        if (work.pictures.length > 0) {
-            return (
-                <img
-                    key={i}
-                    src={picture}
-                    alt="work"
-                    className={getClassName(i)}
-                />
-            );
-        }
-        return null; // Si la condition n'est pas remplie, rien ne sera rendu
-    });
+    // Fonction pour attribuer une classe à l'image affichée
+    const getClassName = (i) => (i === currentPicture ? "currentImg" : "");
 
-    //décompte des img sous format "nb/nbTotalimg"
+    // Décompte des images (format "nb/nbTotalimg")
     const getFormattedImageCount = () => {
-        if (pictures.length > 1) {
-            const totalImageCount = work?.pictures.length;
-            const currentImageCount = currentPicture + 1;
+        const totalImageCount = pictures.length;
+        const currentImageCount = currentPicture + 1;
 
-            return `${currentImageCount}/${totalImageCount}`
-        }
-    }
+        return `${currentImageCount}/${totalImageCount}`;
+    };
 
+    // Navigation vers l'image suivante
     const moveToNext = () => {
-        //currentState va changer de 1 à 1, sans dépasser la longueur du nb d'img
-        setCurrentPicture((currentPicture + 1) % pictures.length)
-    }
+        setCurrentPicture((currentPicture + 1) % pictures.length);
+    };
 
+    // Navigation vers l'image précédente
     const moveToPrevious = () => {
-
-        setCurrentPicture((currentPicture - 1 + pictures.length) % pictures.length);
-
-        //notre constante équivaut l'img actuelle - 1 lorsqu'on on arrive à la fin du nb d'imgs
-        const afterPictureLength = currentPicture - 1
-        //mais si c'est inférieur à 0 on applique 
-        if (afterPictureLength < 0) {
-            //application du changement d'img avec le code en ()
-            setCurrentPicture(pictures.length - 1)
-            return
-        }
-        //sinon le code habituel pour le changement d'img
-        setCurrentPicture((currentPicture - 1) % pictures.length)
-    }
-
+        setCurrentPicture(
+            (currentPicture - 1 + pictures.length) % pictures.length
+        );
+    };
 
     return (
-        <>
+        <div className="slideshow">
             <div className="infoBanner">
-                {pictures}
-                <button className="arrowLeft arrow">
-                    {pictures.length > 1 && (
-                        <i className="fa-solid fa-chevron-left" onClick={moveToPrevious}></i>
-                    )}
+                <div className="imageContainer">
+                    {pictures.map((picture, i) => (
+                        <img
+                            key={i}
+                            src={picture}
+                            alt={`Image ${i + 1}`}
+                            className={getClassName(i)}
+                        />
+                    ))}
+                </div>
+                <button className="arrowLeft arrow" onClick={moveToPrevious}>
+                    <i className="fa-solid fa-chevron-left"></i>
                 </button>
-                <button className="arrowRight arrow">
-                    {pictures.length > 1 && (
-                        <i className="fa-solid fa-chevron-right" onClick={moveToNext}></i>
-                    )}
+                <button className="arrowRight arrow" onClick={moveToNext}>
+                    <i className="fa-solid fa-chevron-right"></i>
                 </button>
                 <span className="imgCount">{getFormattedImageCount()}</span>
             </div>
-
-        </>
-    )
+        </div>
+    );
 }
 
 export default Slideshow;

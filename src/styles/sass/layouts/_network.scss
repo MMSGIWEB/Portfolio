@@ -20,7 +20,11 @@
         height: 38px;
         text-overflow: ellipsis;
         @include glassEffect;
+        transition: all 1s;
 
+        &:hover {
+            transform: scale(1.15);
+        }
 
         a {
             color: #fff;

@@ -52,6 +52,11 @@
         .tool {
             text-align: center;
             @include glassEffect;
+            transition: all 1s;
+
+            &:hover {
+                transform: scale(1.15);
+            }
 
             .tool-icon {
                 width: 70px; // Taille des icônes

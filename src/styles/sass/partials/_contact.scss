@@ -76,6 +76,11 @@ form {
                 background: #c36d7d;
                 justify-self: center;
                 margin: 1em .8em;
+                transition: all 1s;
+
+                &:hover {
+                    transform: scale(1.15);
+                }
             }
         }
     }

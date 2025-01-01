@@ -1,6 +1,6 @@
 import Slideshow from "../fiche/Slideshow";
 import projectsData from "../../datas/projectsData";
-import Modal from 'react-modal';
+import Modal from "react-modal";
 import { useEffect, useState } from "react";
 
 function ProjectModal({ isOpen, closeModal, projectId }) {
@@ -9,18 +9,20 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
     // Utilisation de l'ID du projet pour récupérer les données du projet
     useEffect(() => {
         if (projectId) {
-            const foundProject = projectsData.find(project => project.id === projectId);
+            const foundProject = projectsData.find((project) => project.id === projectId);
             setProject(foundProject); // Mets à jour l'état avec les données du projet
         }
     }, [projectId]); // Recharge les données quand `projectId` change
-
 
     if (!project) {
         return (
             <Modal className="pModal" isOpen={isOpen} onRequestClose={closeModal} contentLabel="Modale du projet">
                 <i className="fa-solid fa-x" onClick={closeModal}></i>
                 <h1>Projet non trouvé</h1>
-                <p>Oups il semblerait qu'il y ai une problème! Veuillez m'excuser pour ce désagrément. 😵</p>
+                <p>
+                    Oups il semblerait qu'il y ai une problème! Veuillez m'excuser pour ce désagrément.
+                    😵
+                </p>
             </Modal>
         );
     }
@@ -28,8 +30,8 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
     const tools = project.tools?.map((tool, index) => {
         return (
             <img key={index} src={tool} alt={`Tool ${index + 1}`} className="tool-logo" width="50" />
-        )
-    })
+        );
+    });
 
     return (
         <div className="pBlock">
@@ -38,10 +40,8 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
                 <h1>{project?.title}</h1>
                 <div className="info">
                     <p>{project?.content}</p>
-                    <Slideshow />
-                    <div className="tools" >
-                        {tools}
-                    </div>
+                    <Slideshow pictures={project.pictures} />
+                    <div className="tools">{tools}</div>
                 </div>
                 <div className="links">
                     <div className="block">
@@ -55,9 +55,9 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
                         </a>
                     </div>
                 </div>
-            </Modal >
+            </Modal>
         </div>
-    )
+    );
 }
 
 export default ProjectModal;

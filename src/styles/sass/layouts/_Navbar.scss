@@ -25,11 +25,6 @@ header {
         .link {
             @include flexcc;
 
-
-            &:active {
-                @include blackUnderline;
-            }
-
             &:hover {
                 @include blackUnderline;
                 color: #000;
@@ -46,8 +41,8 @@ header {
     }
 
 
-    nav a.active {
-        @include blackUnderline;
-    }
+    // nav a.active {
+    //     @include blackUnderline;
+    // }
 
 }

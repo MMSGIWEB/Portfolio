@@ -89,10 +89,6 @@ header nav .link {
   justify-content: center;
   align-items: center;
 }
-header nav .link:active {
-  text-decoration: underline;
-  color: #000;
-}
 header nav .link:hover {
   text-decoration: underline;
   color: #000;
@@ -104,10 +100,6 @@ header nav .link div {
   font-weight: 500;
   text-wrap: nowrap;
   font-size: 2em;
-}
-header nav a.active {
-  text-decoration: underline;
-  color: #000;
 }
 
 .projects-section h1,
@@ -148,6 +140,10 @@ header nav a.active {
   width: 27%;
   max-width: 200px;
   height: 80px;
+  transition: all 1s;
+}
+.projects-section .cardsContainer article:hover {
+  transform: scale(1.15);
 }
 .projects-section .cardsContainer article .cardLink {
   display: flex;
@@ -268,6 +264,10 @@ form {
   background: #c36d7d;
   justify-self: center;
   margin: 1em 0.8em;
+  transition: all 1s;
+}
+#contact_form article form button:hover {
+  transform: scale(1.15);
 }
 
 .ReactModal__Overlay--after-open {
@@ -339,6 +339,10 @@ form {
           backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 0.5em;
+  transition: all 1s;
+}
+.skillsBox .tools-container .tool:hover {
+  transform: scale(1.15);
 }
 .skillsBox .tools-container .tool .tool-icon {
   width: 70px;
@@ -443,6 +447,10 @@ form {
           backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 0.5em;
+  transition: all 1s;
+}
+.networkList li:hover {
+  transform: scale(1.15);
 }
 .networkList li a {
   color: #fff;
