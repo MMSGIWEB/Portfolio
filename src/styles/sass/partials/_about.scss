@@ -1,0 +1,6 @@
+@import "../details/mixin";
+
+.about-container {
+    @include flexCCC;
+    width: 80%;
+}

@@ -17,7 +17,8 @@ function Home() {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible'); // Ajouter la classe 'visible' à l'élément lorsqu'il devient visible
-                        observer.unobserve(entry.target); // Arrêter d'observer une fois l'élément visible
+                    } else {
+                        entry.target.classList.remove('visible'); // Supprimer la classe 'visible' si l'élément sort de la vue
                     }
                 });
             },

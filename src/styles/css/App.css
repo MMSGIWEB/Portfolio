@@ -97,16 +97,6 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-image: url("https://images.unsplash.com/photo-1705872599046-70e2eee1e838?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 img {
   width: 100%;
   -o-object-fit: cover;
@@ -135,11 +125,12 @@ section {
 
 .element {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s, transform 1s;
+  transform: translateX(150px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .element.visible {
-  animation: fadeInUp 1s ease-out forwards;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .skills-container {
@@ -268,6 +259,14 @@ header nav .link div {
   width: 160px;
   font-size: 1.1em;
   text-wrap: wrap;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
 }
 
 fieldset,
