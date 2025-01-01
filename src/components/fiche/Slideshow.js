@@ -31,7 +31,7 @@ function Slideshow({ pictures }) {
     };
 
     return (
-        <div className="slideshow">
+        <div className="slideshow element">
             <div className="infoBanner">
                 <div className="imageContainer">
                     {pictures.map((picture, i) => (
@@ -43,13 +43,17 @@ function Slideshow({ pictures }) {
                         />
                     ))}
                 </div>
-                <button className="arrowLeft arrow" onClick={moveToPrevious}>
-                    <i className="fa-solid fa-chevron-left"></i>
-                </button>
-                <button className="arrowRight arrow" onClick={moveToNext}>
-                    <i className="fa-solid fa-chevron-right"></i>
-                </button>
-                <span className="imgCount">{getFormattedImageCount()}</span>
+                {pictures.length > 1 && (
+                    <>
+                        <button className="arrowLeft arrow element" onClick={moveToPrevious}>
+                            <i className="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button className="arrowRight arrow element" onClick={moveToNext}>
+                            <i className="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <span className="imgCount">{getFormattedImageCount()}</span>
+                    </>
+                )}
             </div>
         </div>
     );

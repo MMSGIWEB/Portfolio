@@ -29,7 +29,7 @@
             width: 27%;
             max-width: 200px;
             height: 80px;
-            transition: all 1s;
+            transition: transform 1.5s;
 
             &:hover {
                 transform: scale(1.15);
@@ -51,6 +51,7 @@
                         border-radius: 10px;
                         width: 185px;
                         // box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.15);
+
                     }
                 }
             }

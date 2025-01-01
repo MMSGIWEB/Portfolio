@@ -2,7 +2,7 @@ import homeData from "../../datas/homeData";
 import { skillsRef } from "../../refs/refs";
 
 
-function SkillsSlider() {
+function Skills() {
     const tools = homeData[0]?.tools || [];
 
     return (
@@ -10,17 +10,17 @@ function SkillsSlider() {
             <h1>SKILLS</h1>
             <div className="tools-container">
                 {tools.map((tool, index) => (
-                    <div key={index} className="tool">
+                    <article key={index} className="tool element">
                         <img
                             src={tool}
                             alt={`Tool ${index + 1}`}
                             className="tool-icon"
                         />
-                    </div>
+                    </article>
                 ))}
             </div>
         </section>
     );
 }
 
-export default SkillsSlider;
+export default Skills;

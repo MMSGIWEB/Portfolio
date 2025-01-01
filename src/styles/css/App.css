@@ -1,3 +1,81 @@
+@charset "UTF-8";
+@keyframes waiting {
+  0% {
+    color: #592B25;
+    text-shadow: 0 0 7px #592B25;
+  }
+  90% {
+    color: whitesmoke;
+    text-shadow: none;
+  }
+  100% {
+    color: #592B25;
+    text-shadow: 0 0 7px #592B25;
+  }
+}
+/*loader*/
+@keyframes loading {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+  90% {
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+/*lettres loader*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*ouverture menu*/
+@keyframes slideOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/*apparition elements des sections*/
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+/*ou apparition avec translateY*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 * {
   text-decoration: none;
 }
@@ -53,6 +131,15 @@ h1 {
 
 section {
   height: 100vh !important;
+}
+
+.element {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+.element.visible {
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 .skills-container {
@@ -140,7 +227,7 @@ header nav .link div {
   width: 27%;
   max-width: 200px;
   height: 80px;
-  transition: all 1s;
+  transition: transform 1.5s;
 }
 .projects-section .cardsContainer article:hover {
   transform: scale(1.15);
@@ -324,9 +411,9 @@ form {
 }
 .skillsBox .tools-container {
   display: grid;
-  grid-template-columns: 130px 130px 130px;
-  grid-template-rows: 130px 130px 130px;
-  gap: 1em;
+  grid-template-columns: 130px 130px 130px 130px;
+  grid-template-rows: 130px 130px 130px 130px;
+  gap: 4em;
   justify-content: center;
   align-items: center;
   width: 80%;
@@ -339,7 +426,8 @@ form {
           backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 0.5em;
-  transition: all 1s;
+  transition: all 1s ease-in-out;
+  transition: transform 1s;
 }
 .skillsBox .tools-container .tool:hover {
   transform: scale(1.15);
@@ -348,6 +436,12 @@ form {
   width: 70px;
   height: 70px;
   margin-bottom: 10px;
+  transition: transform 1s;
+  transform-origin: center;
+}
+.skillsBox .tools-container .tool .tool-icon:hover {
+  transform: rotate3d(1, 1, 0, 360deg);
+  /* Rotation 3D complète sur X et Y */
 }
 .skillsBox .tools-container .tool .tool-name {
   font-size: 1rem;
@@ -462,22 +556,6 @@ form {
   color: #fff;
 }
 
-@keyframes slideOut {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-@keyframes slideIn {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
 @keyframes waiting {
   0% {
     color: #592B25;
@@ -492,6 +570,7 @@ form {
     text-shadow: 0 0 7px #592B25;
   }
 }
+/*loader*/
 @keyframes loading {
   0% {
     opacity: 1;
@@ -506,6 +585,7 @@ form {
     z-index: 1;
   }
 }
+/*lettres loader*/
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -517,6 +597,7 @@ form {
     opacity: 1;
   }
 }
+/*ouverture menu*/
 @keyframes slideOut {
   0% {
     opacity: 0;
@@ -528,6 +609,28 @@ form {
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+/*apparition elements des sections*/
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+/*ou apparition avec translateY*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 .loader {
@@ -579,22 +682,6 @@ form {
   animation: loading 6s linear;
 }
 
-@keyframes slideOut {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-@keyframes slideIn {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
 @keyframes waiting {
   0% {
     color: #592B25;
@@ -609,6 +696,7 @@ form {
     text-shadow: 0 0 7px #592B25;
   }
 }
+/*loader*/
 @keyframes loading {
   0% {
     opacity: 1;
@@ -623,6 +711,7 @@ form {
     z-index: 1;
   }
 }
+/*lettres loader*/
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -634,6 +723,7 @@ form {
     opacity: 1;
   }
 }
+/*ouverture menu*/
 @keyframes slideOut {
   0% {
     opacity: 0;
@@ -645,6 +735,28 @@ form {
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+/*apparition elements des sections*/
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+/*ou apparition avec translateY*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 @media screen and (max-width: 900px) {
@@ -722,13 +834,17 @@ form {
   }
   .cardsContainer {
     display: grid;
-    grid-template-columns: 180px 180px;
-    grid-template-rows: 120px 120px 120px 120px 120px;
+    grid-template-columns: 180px 180px 180px;
+    grid-template-rows: 120px 120px 120px;
     gap: 1em;
     justify-content: center;
   }
   .cardsContainer article {
     width: 100% !important;
+  }
+  .tools-container {
+    grid-template-columns: 130px 130px 130px !important;
+    overflow-x: scroll;
   }
   #contact_form article {
     display: flex;
@@ -746,7 +862,7 @@ form {
   }
 }
 @media screen and (max-width: 700px) {
-  .slides-container {
+  .tools-container {
     grid-template-columns: 130px 130px !important;
     grid-template-rows: 130px 130px !important;
   }

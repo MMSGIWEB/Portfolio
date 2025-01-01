@@ -17,9 +17,9 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
     if (!project) {
         return (
             <Modal className="pModal" isOpen={isOpen} onRequestClose={closeModal} contentLabel="Modale du projet">
-                <i className="fa-solid fa-x" onClick={closeModal}></i>
-                <h1>Projet non trouvé</h1>
-                <p>
+                <i className="fa-solid fa-x element" onClick={closeModal}></i>
+                <h1 className="element">Projet non trouvé</h1>
+                <p className="element">
                     Oups il semblerait qu'il y ai une problème! Veuillez m'excuser pour ce désagrément.
                     😵
                 </p>
@@ -38,12 +38,12 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
             <Modal className="pModal" isOpen={isOpen} onRequestClose={closeModal} contentLabel="Modale du projet">
                 <i className="fa-solid fa-x" onClick={closeModal}></i>
                 <h1>{project?.title}</h1>
-                <div className="info">
+                <div className="info element">
                     <p>{project?.content}</p>
                     <Slideshow pictures={project.pictures} />
                     <div className="tools">{tools}</div>
                 </div>
-                <div className="links">
+                <div className="links element">
                     <div className="block">
                         <a href={project?.github}>
                             <button>Source</button>

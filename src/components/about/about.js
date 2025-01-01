@@ -6,7 +6,7 @@ function AboutMe() {
 
     const course = about[0].courses?.map((course, i) => {
         return (
-            <article className='block' key={i}>
+            <article className='block element' key={i}>
                 <div className='title'>{course.title}</div>
                 <div className='date'>{course.date}</div>
                 <div className='location'>{course.location}</div>
@@ -22,7 +22,7 @@ function AboutMe() {
 
     return (
         <section ref={aboutMeRef} className='about-container'>
-            <article className="about-content">
+            <article className="about-content element">
                 {about[0].intro?.map((paragraph, i) => {
                     return (
                         <p key={i} className="text">{paragraph}</p>
@@ -30,18 +30,15 @@ function AboutMe() {
                 })}
 
             </article>
-            <article className='course-content'>
+            <article className='course-content element'>
                 <h1>DIPLÔMES / FORMATIONS</h1>
                 {course}
             </article>
-            <article className='languages'>
+            <article className='languages element'>
                 <h2>LANGUES</h2>
                 <ul className='list langs'>
                     {languages}
                 </ul>
-            </article>
-            <article className='mydata'>
-                <NetworkLinks />
             </article>
         </section>
     )

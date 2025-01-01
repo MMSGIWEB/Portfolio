@@ -29,7 +29,7 @@ function ContactForm() {
     return (
         <section ref={contactRef} id="contact_form">
             <h1>CONTACT ME</h1>
-            <article className="content">
+            <article className="content element">
                 <div className="formInfo">
                     <h3>Grande adaptabilité et toujours prête à relever de nouveaux défis tout en mettant mes capacités à votre service</h3>
                 </div>

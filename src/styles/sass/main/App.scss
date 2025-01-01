@@ -1,4 +1,5 @@
 @import '../details/mixin';
+@import '../keyframes/keyframes';
 
 * {
     text-decoration: none;
@@ -50,7 +51,16 @@ h1 {
 
 section {
     height: 100vh !important;
-    // z-index: 0;
+}
+
+.element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+
+    &.visible {
+        animation: fadeInUp 1s ease-out forwards;
+    }
 }
 
 .skills-container {

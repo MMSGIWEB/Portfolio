@@ -40,19 +40,19 @@
 
     .tools-container {
         display: grid;
-        grid-template-columns: 130px 130px 130px;
-        grid-template-rows: 130px 130px 130px;
-        gap: 1em;
+        grid-template-columns: 130px 130px 130px 130px;
+        grid-template-rows: 130px 130px 130px 130px;
+        gap: 4em;
         justify-content: center;
         align-items: center;
-        // overflow: scroll;
         width: 80%;
         height: 70vh;
 
         .tool {
             text-align: center;
             @include glassEffect;
-            transition: all 1s;
+            transition: all 1s ease-in-out;
+            transition: transform 1s;
 
             &:hover {
                 transform: scale(1.15);
@@ -62,6 +62,13 @@
                 width: 70px; // Taille des icônes
                 height: 70px;
                 margin-bottom: 10px;
+                transition: transform 1s;
+                transform-origin: center;
+
+                &:hover {
+                    transform: rotate3d(1, 1, 0, 360deg);
+                    /* Rotation 3D complète sur X et Y */
+                }
             }
 
             .tool-name {

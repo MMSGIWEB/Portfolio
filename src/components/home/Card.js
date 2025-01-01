@@ -28,7 +28,7 @@ function Card() {
             <div className="cardsContainer">
                 {projects.map((project) => {
                     return (
-                        <article key={project.id} onClick={() => openModal(project.id)}>
+                        <article key={project.id} onClick={() => openModal(project.id)} className="element">
                             <div className="cardLink">
                                 <div className="card">
                                     <img src={project.cover} alt={project.title} className="cardImg" />

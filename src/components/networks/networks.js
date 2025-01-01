@@ -16,31 +16,31 @@ function NetworkLinks() {
             {content?.myData?.map((data, index) => {
                 return (
                     <ul key={index} className='networkList'>
-                        <li>
+                        <li className='element'>
                             <img src={user} alt="icône équivalent au type d'information" />
                             {data.name} </li>
-                        <li>
+                        <li className='element'>
                             <NavLink to="/contact">
                                 <img src={mail} alt="icône équivalent au type d'information" />
                                 {data.email}
                             </NavLink>
                         </li>
-                        <li>
+                        <li className='element'>
                             <a href={data.twitter}>
                                 <img src={twitter} alt="icône équivalent au type d'information" />
                             </a>
                         </li>
-                        <li>
+                        <li className='element'>
                             <a href={data.linkedIn}>
                                 <img src={linkedIn} alt="icône équivalent au type d'information" />
                             </a>
                         </li>
-                        <li>
+                        <li className='element'>
                             <a href={data.gitHub}>
                                 <img src={gitHub} alt="icône équivalent au type d'information" />
                             </a>
                         </li>
-                        <li>
+                        <li className='element'>
                             <img src={location} alt="icône équivalent au type d'information" />
                             {data.location} </li>
                     </ul>
