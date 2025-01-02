@@ -20,7 +20,7 @@ header {
         justify-content: space-between;
         gap: 3.5em;
         background: rgb(240, 240, 240) !important;
-        @include glassEffect;
+        @include border;
 
         .link {
             @include flexcc;

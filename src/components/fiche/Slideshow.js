@@ -31,24 +31,23 @@ function Slideshow({ pictures }) {
     };
 
     return (
-        <div className="slideshow element">
+        <div className="slideshow modalElmts">
             <div className="infoBanner">
-                <div className="imageContainer">
-                    {pictures.map((picture, i) => (
-                        <img
-                            key={i}
-                            src={picture}
-                            alt={`Image ${i + 1}`}
-                            className={getClassName(i)}
-                        />
-                    ))}
-                </div>
+                {pictures.map((picture, i) => (
+                    <img
+                        key={i}
+                        src={picture}
+                        alt={`Image ${i + 1}`}
+                        className={getClassName(i)}
+                    />
+                ))}
+
                 {pictures.length > 1 && (
                     <>
-                        <button className="arrowLeft arrow element" onClick={moveToPrevious}>
+                        <button className="arrowLeft arrow modalElmts" onClick={moveToPrevious}>
                             <i className="fa-solid fa-chevron-left"></i>
                         </button>
-                        <button className="arrowRight arrow element" onClick={moveToNext}>
+                        <button className="arrowRight arrow modalElmts" onClick={moveToNext}>
                             <i className="fa-solid fa-chevron-right"></i>
                         </button>
                         <span className="imgCount">{getFormattedImageCount()}</span>

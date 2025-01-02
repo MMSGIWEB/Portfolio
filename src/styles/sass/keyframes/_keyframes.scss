@@ -92,3 +92,27 @@
         transform: translateX(0);
     }
 }
+
+/* Animation pour simuler la frappe du texte */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* Animation pour faire clignoter le curseur */
+@keyframes blink {
+
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}

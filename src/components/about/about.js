@@ -22,6 +22,7 @@ function AboutMe() {
 
     return (
         <section ref={aboutMeRef} className='about-container'>
+            <h1>ABOUT ME</h1>
             <article className="about-content element">
                 {about[0].intro?.map((paragraph, i) => {
                     return (
@@ -31,11 +32,11 @@ function AboutMe() {
 
             </article>
             <article className='course-content element'>
-                <h1>DIPLÔMES / FORMATIONS</h1>
+                <h2>DIPLÔMES / FORMATIONS</h2>
                 {course}
             </article>
             <article className='languages element'>
-                <h2>LANGUES</h2>
+                <h3>LANGUES</h3>
                 <ul className='list langs'>
                     {languages}
                 </ul>

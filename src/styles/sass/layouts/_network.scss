@@ -19,7 +19,7 @@
         // font-size: 1.2em;
         height: 38px;
         text-overflow: ellipsis;
-        @include glassEffect;
+        @include border;
         transition: all 1s;
 
         &:hover {
@@ -27,9 +27,9 @@
         }
 
         a {
-            color: #fff;
             display: flex;
             gap: 0.6em;
+            color: #000;
         }
 
         img {

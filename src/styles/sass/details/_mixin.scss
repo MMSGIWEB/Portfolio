@@ -62,10 +62,9 @@
     color: #000;
 }
 
-//glassMorphism
-@mixin glassEffect {
-    background: transparent;
-    backdrop-filter: blur(10px);
+//border
+@mixin border {
+    background: linear-gradient(28deg, #6d4747, transparent);
     border-radius: 15px;
     padding: .5em;
 }

@@ -1,10 +1,5 @@
 @import '../details/mixin';
 
-.projects-section h1,
-.card {
-    @include glassEffect;
-}
-
 .projects-section {
     @include flexCCC;
 

@@ -76,8 +76,27 @@
     transform: translateX(0);
   }
 }
+/* Animation pour simuler la frappe du texte */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* Animation pour faire clignoter le curseur */
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
 * {
   text-decoration: none;
+  font-family: "Roboto", sans-serif !important;
 }
 
 a {
@@ -111,21 +130,15 @@ main {
   width: 100%;
 }
 
-h1 {
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 0.5em;
-}
-
 section {
   height: 100vh !important;
+  width: 100%;
+  background: linear-gradient(28deg, #6d4747, transparent);
 }
 
 .element {
   opacity: 0;
-  transform: translateX(150px);
+  transform: translateX(100px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .element.visible {
@@ -156,9 +169,7 @@ header nav {
   justify-content: space-between;
   gap: 3.5em;
   background: rgb(240, 240, 240) !important;
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background: linear-gradient(28deg, #6d4747, transparent);
   border-radius: 15px;
   padding: 0.5em;
 }
@@ -178,15 +189,6 @@ header nav .link div {
   font-weight: 500;
   text-wrap: nowrap;
   font-size: 2em;
-}
-
-.projects-section h1,
-.card {
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 0.5em;
 }
 
 .projects-section {
@@ -261,28 +263,33 @@ header nav .link div {
   text-wrap: wrap;
 }
 
-.about-container {
+.about-container,
+.course-content .block,
+.languages {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+}
+
+.about-container .about-content {
+  width: 90%;
+}
+.about-container p,
+.about-container li {
+  font-size: 1.2em;
+}
+.about-container .block {
+  margin-bottom: 1em;
+}
+.about-container .languages li {
+  list-style: none;
 }
 
 fieldset,
 form {
   display: flex;
   flex-direction: column;
-}
-
-#contact_form p,
-#contact_form form,
-.formInfo h3 {
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 0.5em;
 }
 
 #contact_form,
@@ -316,13 +323,6 @@ form {
   font-size: 2em;
   text-align: center;
 }
-#contact_form article form {
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 0.5em;
-}
 #contact_form article form fieldset {
   border: none;
   gap: 0.5em;
@@ -348,7 +348,6 @@ form {
   font-size: 1.2em;
   border-radius: 10px;
   background: #c36d7d;
-  justify-self: center;
   margin: 1em 0.8em;
   transition: all 1s;
 }
@@ -358,8 +357,164 @@ form {
 
 .ReactModal__Overlay--after-open {
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content,
+.ReactModal__Overlay--after-open .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content {
+  width: 80%;
+  background: rgb(237, 235, 234);
+}
+.ReactModal__Overlay--after-open .ReactModal__Content .modalTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content .modalTop h1 {
+  padding-left: 0.5em;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content .modalTop i {
+  font-size: 2.5em;
+  padding: 0.5em;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content .info,
+.ReactModal__Overlay--after-open .ReactModal__Content .links {
+  margin-bottom: 2em;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content .info {
+  gap: 3.5em;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content .info p {
+  width: 80%;
+  font-size: 1.2em;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content .info .tools {
+  display: flex;
+  gap: 1em;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content .info .tools img {
+  width: 65px;
+  height: 65px;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content .links .block {
+  padding: 1em 1.2em;
+  border-radius: 10px;
+  background: #c36d7d;
+}
+.ReactModal__Overlay--after-open .ReactModal__Content .links .block a {
+  color: #000;
+  font-size: 1.2em;
 }
 
+@keyframes waiting {
+  0% {
+    color: #592B25;
+    text-shadow: 0 0 7px #592B25;
+  }
+  90% {
+    color: whitesmoke;
+    text-shadow: none;
+  }
+  100% {
+    color: #592B25;
+    text-shadow: 0 0 7px #592B25;
+  }
+}
+/*loader*/
+@keyframes loading {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+  90% {
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+/*lettres loader*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*ouverture menu*/
+@keyframes slideOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/*apparition elements des sections*/
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+/*ou apparition avec translateY*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Animation pour simuler la frappe du texte */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* Animation pour faire clignoter le curseur */
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
 .msg {
   position: fixed;
   bottom: 15px;
@@ -367,11 +522,6 @@ form {
   width: 80%;
   font-size: 1.5em;
   font-weight: 500;
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 0.5em;
   z-index: 1;
 }
 
@@ -381,15 +531,18 @@ form {
   align-items: center;
   min-width: 203px;
   margin-top: 2em;
+  background-image: url("https://images.unsplash.com/photo-1488875482628-eee706cbfad5?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  /* Pour que l'image couvre toute la section */
+  background-position: bottom;
+  /* Pour centrer l'image */
+  background-repeat: no-repeat;
+  /* Pour éviter la répétition de l'image */
 }
 .top .intro {
   width: 80%;
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 0.5em;
   font-size: 2.5em;
+  font-weight: 600;
   margin-bottom: 0;
   text-align: center;
 }
@@ -420,11 +573,6 @@ form {
 }
 .skillsBox .tools-container .tool {
   text-align: center;
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 0.5em;
   transition: all 1s ease-in-out;
   transition: transform 1s;
 }
@@ -451,11 +599,6 @@ form {
   position: fixed;
   right: 50px;
   bottom: 50px;
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 0.5em;
   z-index: 1;
 }
 .goUpArrow i {
@@ -463,28 +606,30 @@ form {
   padding: 0.2em 0.3em;
 }
 
+.slideshow {
+  width: 70%;
+  z-index: 0;
+}
+
 .infoBanner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.infoBanner {
-  height: 359px;
+  height: 400px;
   position: relative;
   border-radius: 25px;
-  width: 440px;
+  width: 100%;
 }
 .infoBanner img {
   position: absolute;
-  max-height: 359px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
   border-radius: 25px;
   z-index: -1;
   -o-object-position: center;
      object-position: center;
-  -o-object-fit: contain;
-     object-fit: contain;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
@@ -493,26 +638,25 @@ form {
 }
 .infoBanner .arrow {
   position: absolute;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background: transparent;
+  color: #000;
   font-size: 3.5em;
   border: none;
   cursor: pointer;
-  color: #7d7c7c;
+  z-index: 3;
+  background: transparent;
 }
 .infoBanner .arrowLeft {
-  left: -50px;
+  left: 0;
 }
 .infoBanner .arrowRight {
-  right: -50px;
+  right: 0;
 }
 .infoBanner .imgCount {
   font-weight: 500;
   font-size: 1.5em;
+  color: #000;
   position: absolute;
   bottom: -40px;
-  font-family: "Roboto", sans-serif;
 }
 
 .networkList,
@@ -535,9 +679,7 @@ form {
 .networkList li {
   height: 38px;
   text-overflow: ellipsis;
-  background: transparent;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background: linear-gradient(28deg, #6d4747, transparent);
   border-radius: 15px;
   padding: 0.5em;
   transition: all 1s;
@@ -546,9 +688,9 @@ form {
   transform: scale(1.15);
 }
 .networkList li a {
-  color: #fff;
   display: flex;
   gap: 0.6em;
+  color: #000;
 }
 .networkList li img {
   width: 30px;
@@ -630,6 +772,24 @@ form {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+/* Animation pour simuler la frappe du texte */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* Animation pour faire clignoter le curseur */
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
   }
 }
 .loader {
@@ -756,6 +916,24 @@ form {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+/* Animation pour simuler la frappe du texte */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* Animation pour faire clignoter le curseur */
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
   }
 }
 @media screen and (max-width: 900px) {

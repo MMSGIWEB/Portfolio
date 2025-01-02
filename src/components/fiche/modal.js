@@ -1,4 +1,4 @@
-import Slideshow from "../fiche/Slideshow";
+import Slideshow from "./Slideshow";
 import projectsData from "../../datas/projectsData";
 import Modal from "react-modal";
 import { useEffect, useState } from "react";
@@ -17,9 +17,11 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
     if (!project) {
         return (
             <Modal className="pModal" isOpen={isOpen} onRequestClose={closeModal} contentLabel="Modale du projet">
-                <i className="fa-solid fa-x element" onClick={closeModal}></i>
-                <h1 className="element">Projet non trouvé</h1>
-                <p className="element">
+                <div className="modalTop">
+                    <h1 className="modalElmts">Projet non trouvé</h1>
+                    <i className="fa-solid fa-x modalElmts" onClick={closeModal}></i>
+                </div>
+                <p className="modalElmts">
                     Oups il semblerait qu'il y ai une problème! Veuillez m'excuser pour ce désagrément.
                     😵
                 </p>
@@ -36,24 +38,22 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
     return (
         <div className="pBlock">
             <Modal className="pModal" isOpen={isOpen} onRequestClose={closeModal} contentLabel="Modale du projet">
-                <i className="fa-solid fa-x" onClick={closeModal}></i>
-                <h1>{project?.title}</h1>
-                <div className="info element">
+                <div className="modalTop">
+                    <h1>{project?.title}</h1>
+                    <i className="fa-solid fa-x" onClick={closeModal}></i>
+                </div>
+                <div className="info modalElmts">
                     <p>{project?.content}</p>
                     <Slideshow pictures={project.pictures} />
                     <div className="tools">{tools}</div>
                 </div>
-                <div className="links element">
-                    <div className="block">
-                        <a href={project?.github}>
-                            <button>Source</button>
-                        </a>
-                    </div>
-                    <div className="block">
-                        <a href={project?.link}>
-                            <button>Site</button>
-                        </a>
-                    </div>
+                <div className="links modalElmts">
+                    <button className="block">
+                        <a href={project?.github}>Source</a>
+                    </button>
+                    <button className="block">
+                        <a href={project?.link}>Site</a>
+                    </button>
                 </div>
             </Modal>
         </div>

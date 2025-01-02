@@ -3,6 +3,7 @@
 
 * {
     text-decoration: none;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 a {
@@ -34,22 +35,20 @@ main {
     width: 100%
 }
 
-h1 {
-    @include glassEffect;
-}
-
 section {
     height: 100vh !important;
+    width: 100%;
+    background: linear-gradient(28deg, #6d4747, transparent);
 }
 
 .element {
     opacity: 0; // L'élément est invisible par défaut
-    transform: translateX(150px); // Vous pouvez choisir l'effet de déplacement que vous voulez
-    transition: opacity 0.5s ease, transform 0.5s ease; // Ajoutez une transition pour l'opacité et le déplacement
+    transform: translateX(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease; // Transition pour l'opacité et le déplacement
 
 
     &.visible {
-        opacity: 1; // Devenir visible quand l'élément entre dans la vue
+        opacity: 1; // Devenient visible quand l'élément entre dans la vue
         transform: translateX(0); // Réinitialisation de la position après le défilement
     }
 }

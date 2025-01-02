@@ -1,7 +1,7 @@
 import { useState } from "react";
 import projects from "../../datas/projectsData"
 import { projectsRef } from "../../refs/refs";
-import ProjectModal from "./modal";
+import ProjectModal from "../fiche/modal";
 
 
 function Card() {

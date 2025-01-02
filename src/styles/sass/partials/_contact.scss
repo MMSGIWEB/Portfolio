@@ -6,12 +6,6 @@ form {
 
 }
 
-#contact_form p,
-#contact_form form,
-.formInfo h3 {
-    @include glassEffect;
-}
-
 #contact_form,
 .formInfo {
     @include flexCCC;
@@ -43,7 +37,6 @@ form {
         }
 
         form {
-            @include glassEffect;
 
             fieldset {
                 border: none;
@@ -74,7 +67,6 @@ form {
                 font-size: 1.2em;
                 border-radius: 10px;
                 background: #c36d7d;
-                justify-self: center;
                 margin: 1em .8em;
                 transition: all 1s;
 

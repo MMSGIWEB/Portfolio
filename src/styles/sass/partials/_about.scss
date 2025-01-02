@@ -1,6 +1,27 @@
 @import "../details/mixin";
 
-.about-container {
+.about-container,
+.course-content .block,
+.languages {
     @include flexCCC;
-    width: 80%;
+}
+
+.about-container {
+
+    .about-content {
+        width: 90%;
+    }
+
+    p,
+    li {
+        font-size: 1.2em;
+    }
+
+    .block {
+        margin-bottom: 1em;
+    }
+
+    .languages li {
+        list-style: none;
+    }
 }

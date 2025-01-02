@@ -2,4 +2,70 @@
 
 .ReactModal__Overlay--after-open {
     z-index: 2;
+    @include flexcc;
+
+    .ReactModal__Content,
+    .info {
+        @include flexCCC;
+
+    }
+
+    .ReactModal__Content {
+        width: 80%;
+        background: rgb(237, 235, 234);
+
+        .modalTop {
+            @include flexRowSB;
+            width: 100%;
+
+            h1 {
+                padding-left: .5em;
+            }
+
+            i {
+                font-size: 2.5em;
+                padding: .5em;
+            }
+        }
+
+        .info,
+        .links {
+            margin-bottom: 2em;
+        }
+
+        .info {
+            gap: 3.5em;
+
+            p {
+                width: 80%;
+                font-size: 1.2em;
+            }
+
+            .tools {
+                display: flex;
+                gap: 1em;
+
+                img {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+
+        .links {
+            @include flexcc;
+            gap: 3em;
+
+            .block {
+                padding: 1em 1.2em;
+                border-radius: 10px;
+                background: #c36d7d;
+
+                a {
+                    color: #000;
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
 }

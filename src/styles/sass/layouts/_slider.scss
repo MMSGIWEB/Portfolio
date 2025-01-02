@@ -1,23 +1,24 @@
 @import "../details/mixin";
 
-
-.infoBanner {
-    @include flexCCC;
+.slideshow {
+    width: 70%;
+    z-index: 0;
 }
 
 .infoBanner {
-    height: 359px;
+    @include flexCCC;
+    height: 400px;
     position: relative;
     border-radius: 25px;
-    width: 440px;
+    width: 100%;
 
     img {
         position: absolute;
-        max-height: 359px;
+        object-fit: contain;
+        height: 100%;
         border-radius: 25px;
         z-index: -1;
         object-position: center;
-        object-fit: contain;
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
 
@@ -28,27 +29,28 @@
 
     .arrow {
         position: absolute;
-        background-clip: text;
-        background: transparent;
+        color: #000;
         font-size: 3.5em;
         border: none;
         cursor: pointer;
-        color: #7d7c7c;
+        z-index: 3;
+        background: transparent;
     }
 
     .arrowLeft {
-        left: -50px;
+        left: 0;
     }
 
     .arrowRight {
-        right: -50px;
+        right: 0;
     }
 
     .imgCount {
         font-weight: 500;
         font-size: 1.5em;
+        color: #000;
         position: absolute;
         bottom: -40px;
-        font-family: 'Roboto', sans-serif;
     }
+
 }
