@@ -122,6 +122,18 @@
     overflow: scroll;
   }
 
+  .arrow {
+    padding: .8em !important;
+  }
+
+  .tools img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .infoBanner {
+    height: 100px;
+  }
 }
 
 @media screen and (max-width: 620px) {}

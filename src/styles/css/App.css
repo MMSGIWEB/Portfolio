@@ -643,7 +643,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 300px;
   position: relative;
   border-radius: 25px;
   width: 100%;
@@ -653,6 +653,7 @@ form {
   -o-object-fit: contain;
      object-fit: contain;
   height: 100%;
+  width: 70%;
   border-radius: 25px;
   z-index: -1;
   -o-object-position: center;
@@ -665,12 +666,12 @@ form {
 }
 .infoBanner .arrow {
   position: absolute;
-  color: #000;
-  font-size: 3.5em;
+  background: #c36d7d !important;
+  padding: 1.5em;
+  border-radius: 6px;
   border: none;
   cursor: pointer;
   z-index: 3;
-  background: transparent;
 }
 .infoBanner .arrowLeft {
   left: 0;
@@ -680,10 +681,10 @@ form {
 }
 .infoBanner .imgCount {
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1em;
   color: #000;
   position: absolute;
-  bottom: -40px;
+  bottom: -25px;
 }
 
 .networkList,
@@ -1068,5 +1069,15 @@ form {
     grid-template-rows: 130px 130px !important;
     gap: 1em !important;
     overflow: scroll;
+  }
+  .arrow {
+    padding: 0.8em !important;
+  }
+  .tools img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .infoBanner {
+    height: 100px;
   }
 }/*# sourceMappingURL=App.css.map */

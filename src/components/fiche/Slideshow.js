@@ -44,12 +44,8 @@ function Slideshow({ pictures }) {
 
                 {pictures.length > 1 && (
                     <>
-                        <button className="arrowLeft arrow modalElmts hover" onClick={moveToPrevious}>
-                            <i className="fa-solid fa-chevron-left"></i>
-                        </button>
-                        <button className="arrowRight arrow modalElmts hover" onClick={moveToNext}>
-                            <i className="fa-solid fa-chevron-right"></i>
-                        </button>
+                        <button className="arrowLeft arrow modalElmts hover" onClick={moveToPrevious}></button>
+                        <button className="arrowRight arrow modalElmts hover" onClick={moveToNext}></button>
                         <span className="imgCount">{getFormattedImageCount()}</span>
                     </>
                 )}

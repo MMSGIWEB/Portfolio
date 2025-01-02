@@ -7,7 +7,7 @@
 
 .infoBanner {
     @include flexCCC;
-    height: 400px;
+    height: 300px;
     position: relative;
     border-radius: 25px;
     width: 100%;
@@ -16,6 +16,7 @@
         position: absolute;
         object-fit: contain;
         height: 100%;
+        width: 70%;
         border-radius: 25px;
         z-index: -1;
         object-position: center;
@@ -29,12 +30,12 @@
 
     .arrow {
         position: absolute;
-        color: #000;
-        font-size: 3.5em;
+        background: #c36d7d !important;
+        padding: 1.5em;
+        border-radius: 6px;
         border: none;
         cursor: pointer;
         z-index: 3;
-        background: transparent;
     }
 
     .arrowLeft {
@@ -47,10 +48,10 @@
 
     .imgCount {
         font-weight: 500;
-        font-size: 1.5em;
+        font-size: 1em;
         color: #000;
         position: absolute;
-        bottom: -40px;
+        bottom: -25px;
     }
 
 }
