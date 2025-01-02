@@ -22,7 +22,7 @@ function AboutMe() {
 
     return (
         <section ref={aboutMeRef} className='about-container'>
-            <h1>ABOUT ME</h1>
+            <h1>QUI SUIS-JE ?</h1>
             <article className="about-content element">
                 {about[0].intro?.map((paragraph, i) => {
                     return (

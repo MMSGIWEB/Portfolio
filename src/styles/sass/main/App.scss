@@ -4,10 +4,20 @@
 * {
     text-decoration: none;
     font-family: 'Roboto', sans-serif !important;
+    box-sizing: border-box;
 }
 
 a {
     cursor: pointer;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100vh;
+    overflow-x: hidden;
 }
 
 html {
@@ -20,6 +30,9 @@ html {
     width: 100%;
     box-sizing: border-box;
 
+    // &>* {
+    //     min-height: 100vh;
+    // }
 }
 
 img {
@@ -32,14 +45,16 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 4em;
-    width: 100%
+    width: 100%;
+    height: 100%;
 }
 
 section {
     height: 100vh !important;
-    width: 100%;
+    // width: 100%;
     background: linear-gradient(28deg, #6d4747, transparent);
     box-sizing: border-box;
+    overflow: scroll;
 }
 
 .element {

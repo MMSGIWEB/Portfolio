@@ -10,7 +10,7 @@
     opacity: 0;
     z-index: -1;
     animation: loading 5s linear;
-    width: 100%;
+    // width: 100%;
 
     .container {
         @include flexCCC;

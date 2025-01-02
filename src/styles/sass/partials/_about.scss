@@ -10,11 +10,13 @@
 
     .about-content {
         width: 90%;
+        overflow: scroll;
     }
 
     p,
     li {
         font-size: 1.2em;
+        text-align: center;
     }
 
     .block {

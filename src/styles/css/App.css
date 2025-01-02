@@ -97,10 +97,20 @@
 * {
   text-decoration: none;
   font-family: "Roboto", sans-serif !important;
+  box-sizing: border-box;
 }
 
 a {
   cursor: pointer;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100vh;
+  overflow-x: hidden;
 }
 
 html {
@@ -128,13 +138,14 @@ main {
   align-items: center;
   gap: 4em;
   width: 100%;
+  height: 100%;
 }
 
 section {
   height: 100vh !important;
-  width: 100%;
   background: linear-gradient(28deg, #6d4747, transparent);
   box-sizing: border-box;
+  overflow: scroll;
 }
 
 .element {
@@ -275,10 +286,12 @@ header nav .link div {
 
 .about-container .about-content {
   width: 90%;
+  overflow: scroll;
 }
 .about-container p,
 .about-container li {
   font-size: 1.2em;
+  text-align: center;
 }
 .about-container .block {
   margin-bottom: 1em;
@@ -421,6 +434,17 @@ form {
   font-size: 1.2em;
 }
 
+.hover {
+  transition: all 1s;
+}
+.hover:hover {
+  transform: scale(1.15);
+}
+
+.modalElmt {
+  animation: fadeInUp 1.5s ease;
+}
+
 @keyframes waiting {
   0% {
     color: #592B25;
@@ -555,7 +579,7 @@ form {
   align-items: center;
   gap: 1.5em;
   position: relative;
-  width: 80%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
 }
@@ -804,7 +828,6 @@ form {
   opacity: 0;
   z-index: -1;
   animation: loading 5s linear;
-  width: 100%;
 }
 .loader .container {
   display: flex;
@@ -977,12 +1000,10 @@ form {
   .mobVbox .mobV {
     border-radius: 10px !important;
     gap: 1em;
-    margin-right: 1.5em;
-    background: rgb(240, 240, 240);
     z-index: 1;
     position: fixed;
     top: 15px;
-    right: 0;
+    right: 50px;
     transition: all 2s;
     animation-delay: 1s;
   }

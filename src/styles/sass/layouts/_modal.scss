@@ -69,3 +69,15 @@
         }
     }
 }
+
+.hover {
+    transition: all 1s;
+
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+.modalElmt {
+    animation: fadeInUp 1.5s ease;
+}

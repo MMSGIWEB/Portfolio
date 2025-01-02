@@ -18,10 +18,10 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
         return (
             <Modal className="pModal" isOpen={isOpen} onRequestClose={closeModal} contentLabel="Modale du projet">
                 <div className="modalTop">
-                    <h1 className="modalElmts">Projet non trouvé</h1>
-                    <i className="fa-solid fa-x modalElmts" onClick={closeModal}></i>
+                    <h1 className="modalElmt">Projet non trouvé</h1>
+                    <i className="fa-solid fa-x modalElmt" onClick={closeModal}></i>
                 </div>
-                <p className="modalElmts">
+                <p className="modalElmt">
                     Oups il semblerait qu'il y ai une problème! Veuillez m'excuser pour ce désagrément.
                     😵
                 </p>
@@ -31,7 +31,7 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
 
     const tools = project.tools?.map((tool, index) => {
         return (
-            <img key={index} src={tool} alt={`Tool ${index + 1}`} className="tool-logo" width="50" />
+            <img key={index} src={tool} alt={`Tool ${index + 1}`} className="tool-logo hover" width="50" />
         );
     });
 
@@ -40,18 +40,18 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
             <Modal className="pModal" isOpen={isOpen} onRequestClose={closeModal} contentLabel="Modale du projet">
                 <div className="modalTop">
                     <h1>{project?.title}</h1>
-                    <i className="fa-solid fa-x" onClick={closeModal}></i>
+                    <i className="fa-solid fa-x hover" onClick={closeModal}></i>
                 </div>
-                <div className="info modalElmts">
+                <div className="info modalElmt">
                     <p>{project?.content}</p>
                     <Slideshow pictures={project.pictures} />
-                    <div className="tools">{tools}</div>
+                    <div className="tools modalElmt">{tools}</div>
                 </div>
-                <div className="links modalElmts">
-                    <button className="block">
+                <div className="links modalElmt">
+                    <button className="block hover">
                         <a href={project?.github}>Source</a>
                     </button>
-                    <button className="block">
+                    <button className="block hover">
                         <a href={project?.link}>Site</a>
                     </button>
                 </div>
