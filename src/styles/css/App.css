@@ -134,6 +134,7 @@ section {
   height: 100vh !important;
   width: 100%;
   background: linear-gradient(28deg, #6d4747, transparent);
+  box-sizing: border-box;
 }
 
 .element {
@@ -1042,5 +1043,7 @@ form {
   .tools-container {
     grid-template-columns: 130px 130px !important;
     grid-template-rows: 130px 130px !important;
+    gap: 1em !important;
+    overflow: scroll;
   }
 }/*# sourceMappingURL=App.css.map */

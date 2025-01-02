@@ -122,6 +122,8 @@
   .tools-container {
     grid-template-columns: 130px 130px !important;
     grid-template-rows: 130px 130px !important;
+    gap: 1em !important;
+    overflow: scroll;
   }
 
 }
