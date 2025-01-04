@@ -22,8 +22,8 @@ function Navbar() {
             <nav className={isSmallScreen ? 'mobV' : 'navigation'}>
                 {isSmallScreen && (
                     // Menu Burger (mobile)
-                    <button onClick={hambMenu} className='hamburger-icon'>
-                        <i className='fa-solid fa-bars'></i>
+                    <button onClick={hambMenu} className='hamburger-icon'> Menu
+                        {/* <i className='fa-solid fa-bars'></i> */}
                     </button>
                 )}
                 {/* Menu déroulant pour mobile */}
