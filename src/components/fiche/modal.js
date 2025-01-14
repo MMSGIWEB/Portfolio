@@ -48,12 +48,16 @@ function ProjectModal({ isOpen, closeModal, projectId }) {
                     <div className="tools modalElmt">{tools}</div>
                 </div>
                 <div className="links modalElmt">
-                    <button className="block hover">
-                        <a href={project?.github}>Source</a>
-                    </button>
-                    <button className="block hover">
-                        <a href={project?.link}>Site</a>
-                    </button>
+                    {project.github &&
+                        <button className="block hover">
+                            <a href={project?.github}>Source</a>
+                        </button>
+                    }
+                    {project.link &&
+                        <button className="block hover">
+                            <a href={project?.link}>Site</a>
+                        </button>
+                    }
                 </div>
             </Modal>
         </div>

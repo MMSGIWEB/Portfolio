@@ -14,10 +14,7 @@ import coverP8 from '../assets/images/projects/nina2.webp'
 import coverP9 from '../assets/images/projects/724events2.webp'
 import coverP10 from '../assets/images/projects/argentbank3.webp'
 import coverP11 from '../assets/images/projects/qwenta.webp'
-import { imgP10, imgP3 } from './imgImport'
-import { imgP4 } from './imgImport'
-import { imgP6 } from './imgImport'
-import { imgP7 } from './imgImport'
+import { imgP4, imgP6, imgP7, imgP10, imgP3, imgP8 } from './imgImport'
 
 const projectsData = [
     {
@@ -59,16 +56,13 @@ const projectsData = [
             javascript
         ],
         "content": "Le projet Print It vise à développer une application web permettant aux utilisateurs d'envoyer des fichiers à imprimer et de les récupérer ultérieurement dans un point de collecte spécifié. Ici, j'ai intégré un carrousel à l'emplacement de la bannière.",
-        "pictures": [
-            coverP5
-        ]
     },
     {
         "id": "11202406",
         "title": "Sophie Bluel",
         "cover": coverP6,
         "github": "https://github.com/MMSGIWEB/Portfolio-architecte-sophie-bluel",
-        "link:": "https://mmsgiweb.github.io/Portfolio-architecte-sophie-bluel",
+        "link:": "https://mmsgiweb.github.io/Portfolio-architecte-sophie-bluel/",
         "tools": [
             html,
             css,
@@ -100,9 +94,7 @@ const projectsData = [
         "github": "https://github.com/MMSGIWEB/nina-carducci",
         "link": "https://mmsgiweb.github.io/nina-carducci/",
         "content": "Ici, il s'agit de l'optimisation du site de Nina Carducci. Avec l'aide de l'outil Lighthouse et WAVE, j'ai pu optimiser les performances du site, en plus du SEO technique et la correction de l'accessibilité. J'ai également ajouté le référencement local et les réseaux sociaux, ce qui vise à améliorer la visibilité du site de la photographe et qui contribue à l'augmentation de la notoriété et de l'accessibilité de son activité.",
-        "pictures": [
-            coverP8
-        ]
+        "pictures": imgP8
     },
     {
         "id": "11202409",
@@ -114,9 +106,6 @@ const projectsData = [
             javascript
         ],
         "content": "Ce projet consiste à débugger et finaliser le développement d'un site one-page pour une agence d'événementiel. Ici, j'ai identifié et corrigé les bugs, complété le cahier de recette de tests et géré le projet avec des outils de développement.",
-        "pictures": [
-            coverP9
-        ]
     },
     {
         "id": "11202410",
@@ -131,7 +120,7 @@ const projectsData = [
             javascript,
             redux
         ],
-        "content": "Ce projet consiste à développer le front-end d'une application bancaire en utilisant React et Redux pour offrir une expérience utilisateur dynamique et réactive. ",
+        "content": "Ce projet consiste à développer le front-end d'une application bancaire en utilisant React et Redux pour offrir une expérience utilisateur dynamique et réactive. J'ai dû par la suite penser aux routes API qui devaient être modélisées du côté back-end à l'aide et le présenter sur un support Swagger (.yaml).",
         "pictures": imgP10
     },
     {
@@ -139,10 +128,7 @@ const projectsData = [
         "title": "Qwenta",
         "cover": coverP11,
         "github": "https://github.com/MMSGIWEB/Qwenta",
-        "content": "Ce projet consiste à planifier et documenter le développement d'un site web en utilisant des spécifications fonctionnelles et techniques, ainsi qu'en organisant un tableau Kanban. Ensuite, j'ai dû découper les tâches, estimer leur complexité et préparer une présentation finale pour le Product Owner du projet.",
-        "pictures": [
-            coverP11
-        ]
+        "content": "Ce projet consiste à planifier et documenter le développement d'un site web en mettant en place un système de veille. Et en définissant des spécifications fonctionnelles et techniques, ainsi qu'en organisant un tableau Kanban. Ensuite, j'ai dû découper les tâches, estimer leur complexité et préparer une présentation finale pour le Product Owner du projet.",
     }
 ]
 
