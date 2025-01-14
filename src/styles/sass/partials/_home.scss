@@ -12,14 +12,18 @@
     z-index: 1;
 }
 
+.top,
+.mentor {
+    background-image: url('https://images.unsplash.com/photo-1488875482628-eee706cbfad5?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .top {
     @include flexcc;
     min-width: 203px;
     margin-top: 2em;
-    background-image: url('https://images.unsplash.com/photo-1488875482628-eee706cbfad5?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
 
     .intro {
         width: 80%;

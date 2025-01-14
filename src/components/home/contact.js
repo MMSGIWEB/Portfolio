@@ -31,7 +31,7 @@ function ContactForm() {
             <h1>CONTACT ME</h1>
             <article className="content element">
                 <div className="formInfo">
-                    <h3>Grande adaptabilité et toujours prête à relever de nouveaux défis tout en mettant mes capacités à votre service</h3>
+                    <h3>Grande capacité d'adaptation et toujours prête à relever de nouveaux défis tout en mettant mes capacités à votre service</h3>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <fieldset>

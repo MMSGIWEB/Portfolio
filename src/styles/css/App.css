@@ -142,7 +142,7 @@ main {
 }
 
 section {
-  height: 100vh !important;
+  min-height: 100vh !important;
   background: linear-gradient(28deg, #6d4747, transparent);
   box-sizing: border-box;
   overflow: scroll;
@@ -277,7 +277,8 @@ header nav .link div {
 
 .about-container,
 .course-content .block,
-.languages {
+.languages,
+.mentor {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -295,6 +296,21 @@ header nav .link div {
 }
 .about-container .block {
   margin-bottom: 1em;
+}
+.about-container .mentor {
+  opacity: 0.9;
+}
+.about-container .mentor h2,
+.about-container .mentor p {
+  color: #fff;
+}
+.about-container .mentor p {
+  font-style: italic;
+  width: 90%;
+  font-weight: 500;
+}
+.about-container .langs {
+  padding-inline-start: 0;
 }
 .about-container .languages li {
   list-style: none;
@@ -550,16 +566,20 @@ form {
   z-index: 1;
 }
 
+.top,
+.mentor {
+  background-image: url("https://images.unsplash.com/photo-1488875482628-eee706cbfad5?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .top {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 203px;
   margin-top: 2em;
-  background-image: url("https://images.unsplash.com/photo-1488875482628-eee706cbfad5?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
 }
 .top .intro {
   width: 80%;

@@ -2,7 +2,8 @@
 
 .about-container,
 .course-content .block,
-.languages {
+.languages,
+.mentor {
     @include flexCCC;
 }
 
@@ -21,6 +22,25 @@
 
     .block {
         margin-bottom: 1em;
+    }
+
+    .mentor {
+        opacity: .9;
+
+        h2,
+        p {
+            color: #fff;
+        }
+
+        p {
+            font-style: italic;
+            width: 90%;
+            font-weight: 500;
+        }
+    }
+
+    .langs {
+        padding-inline-start: 0;
     }
 
     .languages li {

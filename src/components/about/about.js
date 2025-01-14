@@ -31,6 +31,10 @@ function AboutMe() {
                 })}
 
             </article>
+            <article className='mentor element'>
+                <h2>L'AVIS DE MON MENTOR</h2>
+                <p>{about[0].mentor}</p>
+            </article>
             <article className='course-content element'>
                 <h2>DIPLÔMES / FORMATIONS</h2>
                 {course}
